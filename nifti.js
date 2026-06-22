@@ -145,13 +145,14 @@
     metricEls.forEach(function (el) { metricObs.observe(el); });
   })();
 
-  /* ── 3d. HERO PARALLAX ───────────────────────────────────── */
+  /* ── 3d. HERO PARALLAX (desktop only) ───────────────────── */
   (function () {
-    var heroContent = document.querySelector('.hero-content');
+    // Skip on touch / mobile devices to avoid layout issues
+    if (window.matchMedia('(hover: none)').matches) return;
+    var heroContent = document.querySelector('.hero-inner');
     if (!heroContent) return;
     window.addEventListener('scroll', function () {
-      var offset = window.scrollY;
-      heroContent.style.transform = 'translateY(' + offset * 0.18 + 'px)';
+      heroContent.style.transform = 'translateY(' + window.scrollY * 0.14 + 'px)';
     }, { passive: true });
   })();
 
