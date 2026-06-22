@@ -150,7 +150,7 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 .eco-grid{gap:4px;margin-bottom:7px}
 .cta-box{padding:8px 10px}
 .cta-text{font-size:8.5px;margin-bottom:4px}
-@media print{html,body{background:white}.print-bar{display:none!important}.page{margin:0;box-shadow:none;width:100%;height:1122px;overflow:hidden}@page{size:A4 portrait;margin:0}}
+@media print{html,body{background:white;height:297mm;max-height:297mm;overflow:hidden}.print-bar{display:none!important}.page{margin:0;box-shadow:none;width:210mm;height:297mm;max-height:297mm;overflow:hidden;page-break-after:avoid;break-after:avoid}@page{size:A4 portrait;margin:0}}
 @media screen and (max-width:834px){body{background:white}.page{width:100%;margin:0;box-shadow:none}.op-header{grid-template-columns:1fr}.op-hbg-img{display:none}.op-body{grid-template-columns:1fr}.op-col{border-right:none;border-bottom:1px solid var(--line)}}
 </style></head>
 <body>

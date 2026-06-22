@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="nifti.css">
 <style>
-.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
 .work{background:var(--paper-2);border:1px solid var(--line-light);border-radius:6px;padding:28px 26px;transition:transform .25s,box-shadow .25s}
 .work:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(14,26,43,.10)}
 .work .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
@@ -54,7 +54,9 @@
       <div class="work reveal"><div class="top"><span class="name">S-curve</span><span class="status pub">Published</span></div><div class="role">Before-and-after evaluation</div><p>A method to quantify the value of an operational change. In use within TMR and integrated into ANSPA. Co-published with industry in Transport Research Record, a joint paper with our government partners, not just by academia.</p></div>
       <div class="work reveal"><div class="top"><span class="name">WiSe / WRVSL</span><span class="status live">In development</span></div><div class="role">Weather-responsive control</div><p>Real-time weather-responsive variable speed limits that adapt to live conditions on the network. Incorporates crash-risk modelling alongside weather signals, acting before conditions deteriorate rather than after.</p></div>
       <div class="work reveal"><div class="top"><span class="name">SPARC</span><span class="status deployed">With BCC</span></div><div class="role">Performance assessment</div><p>A scalable performance assessment framework developed with Brisbane City Council, turning raw operational data into decision-ready insight.</p></div>
-      <div class="work reveal" style="background:var(--ink-2);border-color:var(--line-dark)"><div class="top"><span class="name" style="color:#fff">The pipeline</span></div><div class="role" style="color:var(--cyan)">What the hub takes on next</div><p style="color:var(--text-light)">Motorway algorithm cascades, an operations knowledge base, and the InteliAgent decision-support prototype.</p></div>
+      <div class="work reveal"><div class="top"><span class="name">GLiVe</span><span class="status live">Live</span></div><div class="role">Real-time transit intelligence</div><p>A live public transport monitoring platform ingesting 25 GB/day of GTFS vehicle positions, incident feeds, and AFC data across the Brisbane network. Provides operators with real-time situational awareness at 2 - 10 second resolution across buses, trains, and CityCats. <a href="https://glive.qut.edu.au/" target="_blank" rel="noopener" style="color:var(--cyan);font-family:var(--mono);font-size:12px;display:inline-block;margin-top:8px">Visit GLiVe &rarr;</a></p></div>
+      <div class="work reveal"><div class="top"><span class="name">InteliAgent</span><span class="status live">In development</span></div><div class="role">AI decision support</div><p>An LLM-backed agentic system designed to capture and operationalise institutional knowledge held by experienced traffic engineers. Enables scenario testing, precedent retrieval, and explainable recommendations, so that expertise is not lost when people move on.</p></div>
+      <div class="work reveal" style="background:var(--ink-2);border-color:var(--line-dark)"><div class="top"><span class="name" style="color:#fff">The pipeline</span></div><div class="role" style="color:var(--cyan)">What the hub takes on next</div><p style="color:var(--text-light)">Motorway algorithm cascades, multi-agency data integration, and full operationalisation of the InteliAgent decision-support system.</p></div>
     </div>
     <p class="work-note reveal">The pattern the hub is built to repeat: <b>research that gets adopted, deployed, and validated in operations</b>, with our partners' names on it.</p>
   </div>
@@ -108,14 +110,14 @@
           <source src="assets/videos/tool-demo-1.mp4" type="video/mp4">
           Your browser does not support embedded video.
         </video>
-        <div class="video-label">Tool demonstration 1</div>
+        <div class="video-label">OPTIMA: Motorway algorithm auto-calibration</div>
       </div>
       <div class="video-card reveal">
         <video controls muted preload="metadata" poster="assets/images/bluetooth-tableau.png">
           <source src="assets/videos/tool-demo-2.mp4" type="video/mp4">
           Your browser does not support embedded video.
         </video>
-        <div class="video-label">Tool demonstration 2</div>
+        <div class="video-label">Public transport automated ticketing data visualisation</div>
       </div>
     </div>
   </div>

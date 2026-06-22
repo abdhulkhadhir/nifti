@@ -6,18 +6,36 @@
 <link rel="stylesheet" href="nifti.css">
 <style>
 .layers{display:flex;flex-direction:column;gap:18px}
-.layer{display:grid;grid-template-columns:110px 1fr 340px;gap:30px;align-items:flex-start;background:var(--paper-2);border:1px solid var(--line-light);border-radius:8px;padding:34px 36px;transition:transform .25s,border-color .25s}
+.layer{display:grid;grid-template-columns:110px 1fr 320px;gap:30px;align-items:flex-start;background:var(--paper-2);border:1px solid var(--line-light);border-radius:8px;padding:34px 36px;transition:transform .25s,border-color .25s}
 .layer:hover{transform:translateX(5px);border-color:rgba(47,183,201,.45);box-shadow:0 8px 32px rgba(14,26,43,.07)}
 .layer .lnum{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--cyan);text-transform:uppercase}
 .layer .lnum b{display:block;font-family:var(--display);font-size:46px;font-weight:700;color:var(--text-dark);letter-spacing:-.02em;margin-top:6px}
 .layer h3{font-size:24px;margin-bottom:12px}
 .layer p{color:var(--text-mid);font-size:16px;max-width:60ch;margin-bottom:14px}
-.layer ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.layer ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
 .layer li{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-mid);background:var(--paper);border:1px solid var(--line-light);border-radius:3px;padding:6px 11px}
 .layer-vis{align-self:center}
 .layer-vis img{width:100%;border-radius:6px;box-shadow:0 12px 36px rgba(14,26,43,.13);border:1px solid var(--line-light)}
+/* Deployed in practice callout */
+.dip{background:rgba(47,183,201,.07);border:1px solid rgba(47,183,201,.22);border-radius:5px;padding:14px 16px}
+.dip-label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.dip ul{list-style:none;display:flex;flex-direction:column;gap:5px;margin:0}
+.dip li{font-size:13.5px;color:var(--text-mid);display:flex;align-items:baseline;gap:7px}
+.dip li::before{content:"›";color:var(--cyan);font-weight:700;flex-shrink:0}
+.dip .badge{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:2px;margin-left:4px;vertical-align:middle}
+.badge-live{background:rgba(47,183,201,.16);color:#1C8294}
+.badge-dev{background:rgba(232,163,61,.14);color:#9a6a1a}
+/* Pipeline diagram */
+.pipeline{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding:4px 0 8px;margin-bottom:48px}
+.pipe-node{flex:1;min-width:130px;background:var(--paper-2);border:1px solid var(--line-light);border-radius:6px;padding:20px 16px;text-align:center;position:relative}
+.pipe-node .pn-icon{font-size:22px;margin-bottom:6px}
+.pipe-node .pn-num{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase;margin-bottom:4px}
+.pipe-node .pn-title{font-family:var(--display);font-weight:700;font-size:14px;color:var(--text-dark);line-height:1.25}
+.pipe-node .pn-sub{font-size:11.5px;color:var(--text-mid);margin-top:5px;line-height:1.4}
+.pipe-arrow{display:flex;align-items:center;padding:0 4px;color:var(--cyan);font-size:20px;flex-shrink:0;opacity:.7}
+.pipe-node.highlight{border-color:rgba(47,183,201,.5);background:rgba(47,183,201,.06)}
 @media(max-width:960px){.layer{grid-template-columns:80px 1fr;gap:18px;padding:24px}.layer .lnum b{font-size:32px}.layer-vis{grid-column:1/-1}}
-@media(max-width:600px){.layer{grid-template-columns:1fr;padding:22px}}
+@media(max-width:600px){.layer{grid-template-columns:1fr;padding:22px}.pipeline{flex-direction:column;gap:10px}.pipe-arrow{transform:rotate(90deg)}}
 </style></head>
 <body>
 <nav class="top-bar" id="topBar">
@@ -47,13 +65,60 @@
 <div class="sb-overlay" id="sbOverlay" onclick="toggleSidebar()"></div>
 <main class="site-main"><header class="pagehead"><div class="glow"></div><div class="wrap"><span class="eyebrow">The operating model</span><h1>Three layers, working as one system.</h1><p>The hub is built around three layers that map onto how a network is actually run. Each already has working pieces, delivered with our partners. The frontier is making them work together.</p></div></header>
 <section>
-  <div class="wrap"><div class="layers">
+  <div class="wrap">
+    <!-- Pipeline flow diagram -->
+    <div class="pipeline reveal" role="img" aria-label="Data flows from sensor feeds through Layer 1 data foundation, Layer 2 algorithms, Layer 3 decision support to the operator">
+      <div class="pipe-node">
+        <div class="pn-icon">📡</div>
+        <div class="pn-num">Input</div>
+        <div class="pn-title">Sensor feeds</div>
+        <div class="pn-sub">Loops, GTFS, Bluetooth, probe, weather, events</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node highlight">
+        <div class="pn-icon">🗄</div>
+        <div class="pn-num">Layer 01</div>
+        <div class="pn-title">Data foundation</div>
+        <div class="pn-sub">Unified multi-agency operational picture</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node highlight">
+        <div class="pn-icon">⚙</div>
+        <div class="pn-num">Layer 02</div>
+        <div class="pn-title">Algorithms</div>
+        <div class="pn-sub">Proactive, cross-boundary control and optimisation</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node highlight">
+        <div class="pn-icon">🤖</div>
+        <div class="pn-num">Layer 03</div>
+        <div class="pn-title">InteliAgent</div>
+        <div class="pn-sub">Decision support, institutional knowledge, scenario testing</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node">
+        <div class="pn-icon">🧑‍💼</div>
+        <div class="pn-num">Output</div>
+        <div class="pn-title">Operator decision</div>
+        <div class="pn-sub">Smarter at assess, decide, and act</div>
+      </div>
+    </div>
+
+    <div class="layers">
     <div class="layer reveal">
       <div class="lnum">Layer<b>01</b></div>
       <div>
         <h3>Connected data foundation</h3>
         <p>One operational picture across modes, agencies, and sensor sources, including signals from the systems transport interacts with. The silo problem solved at the data level.</p>
         <ul><li>Loops &amp; detectors</li><li>Bluetooth</li><li>Probe / trajectory</li><li>Transit (GTFS)</li><li>External feeds</li></ul>
+        <div class="dip">
+          <div class="dip-label">In practice</div>
+          <ul>
+            <li>STREAMS (~7,500 loop detectors across Queensland) fused with GLiVe (25 GB/day transit positions) and 2,200+ Bluetooth scanners into a single operational feed</li>
+            <li>AFC GoCard tap-on/tap-off data and probe vehicle trajectories layered on top for multimodal completeness</li>
+            <li>Weather and external event feeds integrated to trigger responsive algorithm adjustments in Layer 2</li>
+          </ul>
+        </div>
       </div>
       <div class="layer-vis"><img src="assets/images/data-lake-pipeline.png" alt="Data lake pipeline: fusing STREAMS, GLiVe, Bluetooth, AFC into one operational picture" loading="lazy"></div>
     </div>
@@ -63,6 +128,14 @@
         <h3>Algorithms and optimisation</h3>
         <p>Proactive, multimodal control that is movement-and-place aware and works across the motorway and arterial boundary, rather than optimising each in isolation.</p>
         <ul><li>Motorway cascade</li><li>Arterial coordination</li><li>M&amp;P-aware targets</li><li>Weather-responsive</li></ul>
+        <div class="dip">
+          <div class="dip-label">In practice</div>
+          <ul>
+            <li><strong>OPTIMA</strong> <span class="badge badge-live">Deployed</span> - automated motorway control algorithm calibration, removing manual tuning burden and making algorithm behaviour transparent to operators</li>
+            <li><strong>ANSPA</strong> <span class="badge badge-live">Ongoing</span> - multimodal arterial performance measurement, fusing signal, probe, transit and Bluetooth data across SEQ corridors</li>
+            <li><strong>WiSe / WRVSL</strong> <span class="badge badge-dev">In development</span> - real-time weather-responsive variable speed limits that adapt proactively before conditions deteriorate</li>
+          </ul>
+        </div>
       </div>
       <div class="layer-vis"><img src="assets/images/motorway-arterial-layer2.png" alt="Layer 2 algorithms orchestrating proactive control across the motorway-arterial boundary" loading="lazy"></div>
     </div>
@@ -72,6 +145,14 @@
         <h3>InteliAgent decision support</h3>
         <p>Live data, models, and institutional knowledge brought to operators of any experience level, so the right insight arrives at the moment of decision and nothing is lost as the workforce turns over.</p>
         <ul><li>Operator support</li><li>LLM / agentic</li><li>Institutional memory</li><li>Scenario testing</li></ul>
+        <div class="dip">
+          <div class="dip-label">In practice</div>
+          <ul>
+            <li><strong>InteliAgent</strong> <span class="badge badge-dev">In development</span> - an LLM-backed agentic system that surfaces precedents, explains model behaviour, and supports scenario testing</li>
+            <li>Designed so that expertise held by experienced traffic engineers is captured, not lost when staff move on</li>
+            <li>Queries Layer 1 data and Layer 2 algorithm outputs in real time to deliver grounded, explainable recommendations</li>
+          </ul>
+        </div>
       </div>
       <div class="layer-vis"><img src="assets/images/inteliagent-mockup.png" alt="InteliAgent: an operator asks a complex question and gets an experienced, data-grounded answer" loading="lazy"></div>
     </div>

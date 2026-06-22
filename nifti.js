@@ -94,6 +94,67 @@
     revealEls.forEach((el) => observer.observe(el));
   }
 
+  /* ── 3b. ACTIVE NAV HIGHLIGHTING ────────────────────────── */
+  (function () {
+    var path = window.location.pathname.split('/').pop() || 'index.html';
+    // Top bar links
+    document.querySelectorAll('.tb-links a').forEach(function (a) {
+      var href = (a.getAttribute('href') || '').split('/').pop();
+      if (href === path) a.classList.add('active');
+    });
+    // Sidebar links
+    document.querySelectorAll('.sb-link').forEach(function (a) {
+      var href = (a.getAttribute('href') || '').split('/').pop();
+      if (href === path) a.classList.add('active');
+    });
+  })();
+
+  /* ── 3c. COUNT-UP ANIMATION FOR IMPACT METRICS ──────────── */
+  (function () {
+    var metricEls = document.querySelectorAll('.bc-metric .val');
+    if (!metricEls.length) return;
+
+    function countUp(el) {
+      var raw = el.textContent.trim();
+      var suffix = raw.replace(/[\d]/g, ''); // e.g. '+' or ''
+      var target = parseInt(raw.replace(/\D/g, ''), 10);
+      if (isNaN(target)) return;
+      var duration = target > 100 ? 1600 : 900;
+      var start = null;
+      var from = target > 100 ? target - 80 : 0;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var ease = 1 - Math.pow(1 - progress, 3);
+        var current = Math.floor(from + (target - from) * ease);
+        el.textContent = current + (progress < 1 ? '' : suffix);
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    var metricObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          countUp(entry.target);
+          metricObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    metricEls.forEach(function (el) { metricObs.observe(el); });
+  })();
+
+  /* ── 3d. HERO PARALLAX ───────────────────────────────────── */
+  (function () {
+    var heroContent = document.querySelector('.hero-content');
+    if (!heroContent) return;
+    window.addEventListener('scroll', function () {
+      var offset = window.scrollY;
+      heroContent.style.transform = 'translateY(' + offset * 0.18 + 'px)';
+    }, { passive: true });
+  })();
+
   /* ── 4. NETWORK CANVAS (hero, index.html) ────────────────── */
   const canvas = document.getElementById('netcanvas');
   if (canvas) {

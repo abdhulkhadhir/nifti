@@ -163,7 +163,7 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 .collab-desc{font-size:8px}
 .cta-box{padding:8px 10px}
 .cta-text{font-size:8px;margin-bottom:4px}
-@media print{html,body{background:white}.print-bar{display:none!important}.page{margin:0;box-shadow:none;width:100%;height:1122px;overflow:hidden}@page{size:A4 portrait;margin:0}}
+@media print{html,body{background:white;height:297mm;max-height:297mm;overflow:hidden}.print-bar{display:none!important}.page{margin:0;box-shadow:none;width:210mm;height:297mm;max-height:297mm;overflow:hidden;page-break-after:avoid;break-after:avoid}@page{size:A4 portrait;margin:0}}
 @media screen and (max-width:834px){body{background:white}.page{width:100%;margin:0;box-shadow:none}.op-body{grid-template-columns:1fr}.op-col{border-right:none;border-bottom:1px solid var(--line)}.partner-band img{height:120px}}
 </style></head>
 <body>
@@ -258,32 +258,32 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 
       <div class="output-item">
         <div class="out-top"><span class="out-name">OPTIMA</span><span class="badge dep">Deployed</span></div>
-        <div class="out-role">Motorway algorithm calibration &middot; TMR partnership</div>
-        <div class="out-desc">Automated calibration of STREAMS-based Queue Detection and Queue Protection algorithms. Reduces manual tuning and provides transparent knowledge-transfer dashboards.</div>
+        <div class="out-role">Motorway algorithm auto-calibration &middot; TMR</div>
+        <div class="out-desc">Automated calibration of STREAMS motorway algorithms with knowledge-transfer dashboards making algorithm behaviour transparent to operators.</div>
       </div>
 
       <div class="output-item">
         <div class="out-top"><span class="out-name">S-curve evaluation</span><span class="badge pub">Transport Research Record</span></div>
-        <div class="out-role">Before-and-after operational evaluation framework</div>
-        <div class="out-desc">Quantifies the value of a network operational change. Co-authored with TMR engineers. Now standard evaluation methodology in Queensland operations.</div>
+        <div class="out-role">Before-and-after evaluation &middot; co-published with TMR</div>
+        <div class="out-desc">Quantifies the value of a network operational change; co-authored with TMR engineers and now standard evaluation methodology in Queensland.</div>
       </div>
 
       <div class="output-item">
         <div class="out-top"><span class="out-name">ANSPA</span><span class="badge ong">Active development</span></div>
-        <div class="out-role">Arterial performance diagnostic &middot; multimodal fusion</div>
-        <div class="out-desc">Six diagnostic questions, five dashboard types. Fusing STREAMS, Bluetooth, probe, AFC GoCard, and GTFS real-time data into a multimodal arterial performance picture.</div>
+        <div class="out-role">Arterial performance &middot; multimodal fusion</div>
+        <div class="out-desc">Fuses STREAMS, Bluetooth, probe, AFC GoCard, and GTFS data into a multimodal arterial performance diagnostic with five dashboard types.</div>
       </div>
 
       <div class="output-item">
         <div class="out-top"><span class="out-name">WiSe / WRVSL</span><span class="badge dev">In development</span></div>
         <div class="out-role">Weather-responsive variable speed limits</div>
-        <div class="out-desc">Real-time crash-risk modelling combined with BoM radar and RWIS to trigger proactive speed management. Combines safety science with real-time data fusion.</div>
+        <div class="out-desc">Real-time crash-risk modelling with BoM radar and RWIS to trigger proactive speed management before conditions deteriorate.</div>
       </div>
 
       <div class="output-item">
         <div class="out-top"><span class="out-name">GLiVe &amp; SPARC</span><span class="badge dep">Deployed</span></div>
-        <div class="out-role">Real-time transit + person-centric corridor metrics</div>
-        <div class="out-desc">25 GB/day real-time transit feed with 2-10s resolution, and scalable multimodal corridor performance aligned to Movement and Place frameworks with Brisbane City Council.</div>
+        <div class="out-role">Real-time transit + corridor metrics &middot; BCC &amp; TransLink</div>
+        <div class="out-desc">25 GB/day transit monitoring at 2-10s resolution; SPARC delivers Movement and Place aligned corridor performance with BCC.</div>
       </div>
 
     </div>
@@ -309,10 +309,10 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
       <span class="slabel">Research methodology</span>
       <div class="stitle" style="font-size:11px">Operationally co-designed from day one.</div>
 
-      <div class="meth-step"><span class="meth-n">01</span><div class="meth-content"><div class="meth-title">Problem definition with operators</div><div class="meth-desc">Research questions are co-defined with operational partners. The problem is grounded in what actually constrains network performance, not what is convenient to study.</div></div></div>
-      <div class="meth-step"><span class="meth-n">02</span><div class="meth-content"><div class="meth-title">Fit-for-purpose experimental design</div><div class="meth-desc">Solutions are developed and tested on real operational sites or representative datasets, with operators embedded in the research team during testing phases.</div></div></div>
-      <div class="meth-step"><span class="meth-n">03</span><div class="meth-content"><div class="meth-title">Honest validation, null results included</div><div class="meth-desc">Not all approaches work. NiFTi treats null results as valid contributions. Rigour over optimism is a cultural principle, not just a methodology note.</div></div></div>
-      <div class="meth-step"><span class="meth-n">04</span><div class="meth-content"><div class="meth-title">Deployment path designed in from day one</div><div class="meth-desc">The implementation pathway is planned before research starts, not retrofitted after publication. What gets built is built to be deployable.</div></div></div>
+      <div class="meth-step"><span class="meth-n">01</span><div class="meth-content"><div class="meth-title">Problem definition with operators</div><div class="meth-desc">Co-defined with operational partners; grounded in what actually constrains network performance.</div></div></div>
+      <div class="meth-step"><span class="meth-n">02</span><div class="meth-content"><div class="meth-title">Fit-for-purpose experimental design</div><div class="meth-desc">Developed and tested on real operational sites or datasets with operators embedded during testing.</div></div></div>
+      <div class="meth-step"><span class="meth-n">03</span><div class="meth-content"><div class="meth-title">Honest validation, null results included</div><div class="meth-desc">Null results are valid contributions. Rigour over optimism is a cultural principle.</div></div></div>
+      <div class="meth-step"><span class="meth-n">04</span><div class="meth-content"><div class="meth-title">Deployment path designed in from day one</div><div class="meth-desc">Implementation pathway planned before research starts. What gets built is built to deploy.</div></div></div>
 
       <div class="div"></div>
 

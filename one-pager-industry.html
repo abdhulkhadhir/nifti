@@ -151,7 +151,7 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 .cta-text{font-size:8.5px;margin-bottom:4px}
 .sc-frame{margin-top:6px}
 .cap{font-size:6.5px}
-@media print{html,body{background:white}.print-bar{display:none!important}.page{margin:0;box-shadow:none;width:100%;height:1122px;overflow:hidden}@page{size:A4 portrait;margin:0}}
+@media print{html,body{background:white;height:297mm;max-height:297mm;overflow:hidden}.print-bar{display:none!important}.page{margin:0;box-shadow:none;width:210mm;height:297mm;max-height:297mm;overflow:hidden;page-break-after:avoid;break-after:avoid}@page{size:A4 portrait;margin:0}}
 @media screen and (max-width:834px){body{background:white}.page{width:100%;margin:0;box-shadow:none}.op-body{grid-template-columns:1fr}.op-col{border-right:none;border-bottom:1px solid var(--line)}.op-col:last-child{border-bottom:none}.op-steps{flex-wrap:wrap}.op-step{flex-basis:45%}}
 </style></head>
 <body>

@@ -949,7 +949,7 @@ section:not(.dark) {
   transition: color .15s;
 }
 .top-bar .tb-links a:hover { color: #fff; }
-.top-bar .tb-links a.active { color: #fff; font-weight: 600; }
+.top-bar .tb-links a.active { color: #fff; font-weight: 600; border-bottom: 2px solid var(--cyan); padding-bottom: 2px; }
 .top-bar .tb-cta {
   background: var(--cyan);
   color: #060F1C;

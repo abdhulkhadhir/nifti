@@ -5,15 +5,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="nifti.css">
 <style>
-.partner-wrap{max-width:760px}
+.partner-wrap{max-width:880px}
 .ways{display:flex;flex-direction:column;gap:16px;margin-top:8px}
-.way{display:grid;grid-template-columns:54px 1fr;gap:20px;align-items:flex-start;background:var(--paper-2);border:1px solid var(--line-light);border-radius:6px;padding:28px 30px}
+.way{background:var(--paper-2);border:1px solid var(--line-light);border-radius:6px;padding:28px 30px;transition:transform .25s,box-shadow .25s}
+.way:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(14,26,43,.10)}
+.way-head{display:grid;grid-template-columns:54px 1fr;gap:20px;align-items:flex-start}
 .way .wn{font-family:var(--display);font-weight:700;font-size:22px;color:var(--cyan)}
 .way h3{font-size:20px;margin-bottom:8px}.way p{color:var(--text-mid);font-size:15.5px}
+.way-benefits{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line-light)}
+.benefit-tag{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--cyan);background:rgba(47,183,201,.1);border:1px solid rgba(47,183,201,.25);border-radius:3px;padding:5px 10px}
 .contact-band{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:8px;padding:42px 40px;margin-top:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
 .contact-band h3{color:#fff;font-size:24px;margin-bottom:8px}.contact-band p{color:var(--text-light)}
 .contact-band a.email{font-family:var(--mono);font-size:15px;color:var(--cyan)}
-@media(max-width:880px){.way{grid-template-columns:1fr;gap:8px}.contact-band{flex-direction:column;align-items:flex-start}}
+@media(max-width:880px){.way-head{grid-template-columns:1fr;gap:8px}.contact-band{flex-direction:column;align-items:flex-start}}
 </style></head>
 <body>
 <nav class="top-bar" id="topBar">
@@ -45,9 +49,18 @@
 <section>
   <div class="wrap partner-wrap">
     <div class="ways">
-      <div class="way reveal"><div class="wn">01</div><div><h3>Operate a network</h3><p>Bring a real operational problem. We co-define the work, build and test it on a fit-for-purpose site, and move what works into live operations.</p></div></div>
-      <div class="way reveal"><div class="wn">02</div><div><h3>Fund or sponsor</h3><p>Back a multi-agency program with a clear path from research to deployment, and a talent pipeline that outlasts any single project.</p></div></div>
-      <div class="way reveal"><div class="wn">03</div><div><h3>Research with us</h3><p>Join as a PhD, MPhil, or industry-embedded researcher working on operational problems with operational data.</p></div></div>
+      <div class="way reveal">
+        <div class="way-head"><div class="wn">01</div><div><h3>Operate a network</h3><p>Bring a real operational problem. We co-define the research scope and what success looks like jointly with you, build and test on a fit-for-purpose site or dataset, and move what works into live operations with a planned path for implementation from day one.</p></div></div>
+        <div class="way-benefits"><span class="benefit-tag">Co-defined scope</span><span class="benefit-tag">Site-based testing</span><span class="benefit-tag">Deployment pathway</span><span class="benefit-tag">Operational tools &amp; dashboards</span><span class="benefit-tag">Knowledge transfer</span></div>
+      </div>
+      <div class="way reveal">
+        <div class="way-head"><div class="wn">02</div><div><h3>Fund or sponsor</h3><p>Back a multi-agency program with a clear path from research to deployment and a talent pipeline that outlasts any single project. Your investment supports foundational capability, not just one-off outputs.</p></div></div>
+        <div class="way-benefits"><span class="benefit-tag">Named co-investigator access</span><span class="benefit-tag">Priority data access</span><span class="benefit-tag">Talent pipeline</span><span class="benefit-tag">Joint publications</span><span class="benefit-tag">Strategic visibility</span></div>
+      </div>
+      <div class="way reveal">
+        <div class="way-head"><div class="wn">03</div><div><h3>Research with us</h3><p>Join as a PhD, MPhil, or industry-embedded researcher working on operational problems with real operational data. Industry-embedded fellows are co-supervised and spend time in both the lab and the control room.</p></div></div>
+        <div class="way-benefits"><span class="benefit-tag">PhD / MPhil programs</span><span class="benefit-tag">Industry-embedded fellowships</span><span class="benefit-tag">Operational data access</span><span class="benefit-tag">Dual supervision</span></div>
+      </div>
     </div>
     <div class="contact-band reveal">
       <div><h3>Start a conversation</h3><p>We would like to scope this together.</p></div>
@@ -59,11 +72,14 @@
 <section style="padding:48px 0 60px;background:var(--ink-2)">
   <div class="wrap" style="text-align:center">
     <span class="eyebrow" style="color:var(--cyan)">Current partners and collaborators</span>
-    <div style="display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:28px">
+    <div style="display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:28px">
       <img src="assets/images/logo-qut.svg" alt="QUT" style="height:48px;opacity:.85">
       <img src="assets/images/logo-tmr.svg" alt="Department of Transport and Main Roads" style="height:48px;opacity:.85">
       <img src="assets/images/logo-bcc.svg" alt="Brisbane City Council" style="height:48px;opacity:.85">
       <img src="assets/images/logo-transmax.svg" alt="Transmax" style="height:48px;opacity:.85">
+      <img src="assets/images/logo-translink.svg" alt="TransLink" style="height:48px;opacity:.85">
+      <img src="assets/images/logo-mainroads-wa.svg" alt="Main Roads Western Australia" style="height:48px;opacity:.85">
+      <img src="assets/images/logo-imove.svg" alt="iMOVE Cooperative Research Centre" style="height:48px;opacity:.85">
     </div>
   </div>
 </section>
