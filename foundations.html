@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Proven foundations &middot; NiFTi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="nifti.css">
+<style>
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.work{background:var(--paper-2);border:1px solid var(--line-light);border-radius:6px;padding:28px 26px;transition:transform .25s,box-shadow .25s}
+.work:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(14,26,43,.10)}
+.work .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
+.work .name{font-family:var(--display);font-weight:700;font-size:22px}
+.status{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:2px;font-weight:600;white-space:nowrap}
+.status.deployed{background:rgba(70,178,126,.14);color:#2C8159}
+.status.live{background:rgba(47,183,201,.16);color:#1C8294}
+.status.pub{background:rgba(232,163,61,.16);color:#B5781F}
+.work .role{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--text-mid);text-transform:uppercase;margin-bottom:12px}
+.work p{font-size:14.5px;color:var(--text-mid)}
+.work-note{margin-top:30px;font-size:16px;color:var(--text-mid);max-width:64ch}.work-note b{color:var(--text-dark);font-weight:600}
+@media(max-width:880px){.work-grid{grid-template-columns:1fr}}
+</style></head>
+<body>
+<nav class="top-bar" id="topBar">
+  <a class="tb-brand" href="index.html">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="1.25" y="1.25" width="45.5" height="45.5" rx="11" fill="#0E1F38"/><line x1="24" y1="24" x2="24" y2="11" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="24" x2="13" y2="34" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="24" x2="35" y2="34" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="11" x2="35" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><line x1="24" y1="11" x2="13" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><line x1="13" y1="34" x2="35" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><circle cx="24" cy="11" r="3" fill="#F4F6FA"/><circle cx="13" cy="34" r="3" fill="#F4F6FA"/><circle cx="35" cy="34" r="3" fill="#F4F6FA"/><circle cx="24" cy="24" r="4.6" fill="#2FB7C9"/></svg>
+    <span class="logo">Ni<b>F</b>Ti</span>
+  </a>
+  <div class="tb-links" id="tbLinks">
+    <a href="about.html">About</a>
+    <a href="model.html">Operating model</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="team.html">Team</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" onclick="toggleTheme()">
+      <svg id="themeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a class="tb-cta" href="partner.html">Partner with us &rarr;</a>
+    <button class="tb-hamburger" id="tbHamburger" aria-label="Open menu" onclick="toggleMobileNav()">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="site-layout">
+<button class="sb-toggle" id="sbToggle" aria-label="Open navigation" onclick="toggleSidebar()"><svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg><span class="sb-toggle-logo">Ni<b>F</b>Ti</span></button>
+<aside class="sidebar" id="sidebar"><div class="sb-head"><a href="index.html" class="sb-brand"><svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="1.25" y="1.25" width="45.5" height="45.5" rx="11" fill="#0E1F38"/><line x1="24" y1="24" x2="24" y2="11" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="24" x2="13" y2="34" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="24" x2="35" y2="34" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="11" x2="35" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><line x1="24" y1="11" x2="13" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><line x1="13" y1="34" x2="35" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><circle cx="24" cy="11" r="3" fill="#F4F6FA"/><circle cx="13" cy="34" r="3" fill="#F4F6FA"/><circle cx="35" cy="34" r="3" fill="#F4F6FA"/><circle cx="24" cy="24" r="4.6" fill="#2FB7C9"/></svg><span class="logo">Ni<b>F</b>Ti</span></a><button class="sb-close" aria-label="Close" onclick="toggleSidebar()">&#10005;</button></div><nav class="sb-nav"><span class="sb-section-label">The hub</span><a href="about.html" class="sb-link"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>About</a><a href="model.html" class="sb-link"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Operating model</a><a href="foundations.html" class="sb-link active"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>Foundations</a><a href="team.html" class="sb-link"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Team</a><div class="sb-sep"></div><span class="sb-section-label">Resources</span><a href="index.html" class="sb-link"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a></nav><div class="sb-bottom"><a href="partner.html" class="sb-cta-btn">Partner with us &rarr;</a><a href="one-pager.html" target="_blank" class="sb-onepager">View one-pager &#8599;</a></div></aside>
+<div class="sb-overlay" id="sbOverlay" onclick="toggleSidebar()"></div>
+<main class="site-main"><header class="pagehead"><div class="glow"></div><div class="wrap"><span class="eyebrow">Proven foundations</span><h1>Built on a decade of delivered work.</h1><p>NiFTi is not a standing start. Its founding team has already built and deployed pieces of all three layers, with government and industry partners.</p></div></header>
+<section>
+  <div class="wrap">
+    <div class="work-grid">
+      <div class="work reveal"><div class="top"><span class="name">OPTIMA</span><span class="status deployed">Deployed</span></div><div class="role">Motorway algorithm calibration</div><p>Automated calibration of motorway control algorithms, removing the manual tuning burden. Delivers interfaces, tools, and dashboards that make algorithm behaviour transparent, enabling knowledge transfer so operators understand not just what the algorithm does, but why.</p></div>
+      <div class="work reveal"><div class="top"><span class="name">ANSPA</span><span class="status pub">Ongoing project</span></div><div class="role">Arterial network performance</div><p>Multimodal arterial performance measurement, fusing signal, probe, transit, and Bluetooth data into one performance picture. Currently in active development, not yet in live operations.</p></div>
+      <div class="work reveal"><div class="top"><span class="name">S-curve</span><span class="status pub">Published</span></div><div class="role">Before-and-after evaluation</div><p>A method to quantify the value of an operational change. In use within TMR and integrated into ANSPA. Co-published with industry in Transport Research Record, a joint paper with our government partners, not just by academia.</p></div>
+      <div class="work reveal"><div class="top"><span class="name">WiSe / WRVSL</span><span class="status live">In development</span></div><div class="role">Weather-responsive control</div><p>Real-time weather-responsive variable speed limits that adapt to live conditions on the network. Incorporates crash-risk modelling alongside weather signals, acting before conditions deteriorate rather than after.</p></div>
+      <div class="work reveal"><div class="top"><span class="name">SPARC</span><span class="status deployed">With BCC</span></div><div class="role">Performance assessment</div><p>A scalable performance assessment framework developed with Brisbane City Council, turning raw operational data into decision-ready insight.</p></div>
+      <div class="work reveal" style="background:var(--ink-2);border-color:var(--line-dark)"><div class="top"><span class="name" style="color:#fff">The pipeline</span></div><div class="role" style="color:var(--cyan)">What the hub takes on next</div><p style="color:var(--text-light)">Motorway algorithm cascades, an operations knowledge base, and the InteliAgent decision-support prototype.</p></div>
+    </div>
+    <p class="work-note reveal">The pattern the hub is built to repeat: <b>research that gets adopted, deployed, and validated in operations</b>, with our partners' names on it.</p>
+  </div>
+</section>
+
+<!-- Dashboard gallery -->
+<section class="dark">
+  <div class="wrap">
+    <div class="sec-head on-dark reveal">
+      <span class="eyebrow">In the control room</span>
+      <h2>What the tools actually look like.</h2>
+      <p style="color:var(--text-light)">Not wireframes. Not prototypes. Deployed dashboards and tools already running on Queensland's network, built with our government partners.</p>
+    </div>
+    <div class="viz-grid">
+      <div class="viz-card reveal">
+        <div class="screenshot"><img src="assets/images/anspa-dashboard.png" alt="ANSPA Arterial Coordination Health Assessment Tool" loading="lazy"></div>
+        <div class="viz-caption" style="color:var(--text-dim)"><b style="color:var(--text-light)">ANSPA: Arterial Health Tool</b>Interactive route maps, congestion heatmaps, and progression analysis across Queensland corridors</div>
+      </div>
+      <div class="viz-card reveal">
+        <div class="screenshot"><img src="assets/images/glive-transit-map.png" alt="GLiVe TransLink real-time vehicle monitoring" loading="lazy"></div>
+        <div class="viz-caption" style="color:var(--text-dim)"><b style="color:var(--text-light)">GLiVe: Real-time Transit Map</b>Live positions of all buses, CityCats, and trains across Brisbane at 2–10s resolution (25 GB/day)</div>
+      </div>
+      <div class="viz-card reveal">
+        <div class="screenshot"><img src="assets/images/bluetooth-tableau.png" alt="Bluetooth corridor Tableau dashboard" loading="lazy"></div>
+        <div class="viz-caption" style="color:var(--text-dim)"><b style="color:var(--text-light)">Bluetooth Corridor Dashboard</b>Travel speed and travel time statistics across 2,200+ Bluetooth scanners covering BCC and TMR roads</div>
+      </div>
+    </div>
+    <div class="viz-grid" style="margin-top:22px;grid-template-columns:1fr 1fr">
+      <div class="viz-card reveal">
+        <div class="diagram-frame"><img src="assets/images/data-lake-pipeline.png" alt="Data lake pipeline diagram" loading="lazy"></div>
+        <div class="viz-caption" style="color:var(--text-dim)"><b style="color:var(--text-light)">Unified Data Foundation</b>Fusing STREAMS (~7,500 detectors), GLiVe (25 GB/day), Bluetooth, AFC GoCard, probe, and event logs into one operational picture</div>
+      </div>
+      <div class="viz-card reveal">
+        <div class="diagram-frame"><img src="assets/images/motorway-arterial-layer2.png" alt="Motorway-arterial boundary algorithm diagram" loading="lazy"></div>
+        <div class="viz-caption" style="color:var(--text-dim)"><b style="color:var(--text-light)">Motorway–Arterial Algorithm Layer</b>High Flow → Ramp Metering → Queue Protection coordinated as one cascade, not isolated controllers</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Video demos -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Tools in motion</span>
+      <h2>Demonstrations from the lab and the control room.</h2>
+      <p>Short recordings of the tools running on live or real data. Mute is on by default; click to unmute.</p>
+    </div>
+    <div class="video-grid">
+      <div class="video-card reveal">
+        <video controls muted preload="metadata" poster="assets/images/anspa-dashboard.png">
+          <source src="assets/videos/tool-demo-1.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+        <div class="video-label">Tool demonstration 1</div>
+      </div>
+      <div class="video-card reveal">
+        <video controls muted preload="metadata" poster="assets/images/bluetooth-tableau.png">
+          <source src="assets/videos/tool-demo-2.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+        <div class="video-label">Tool demonstration 2</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--paper-2);border-top:1px solid var(--line-light);border-bottom:1px solid var(--line-light);padding:70px 0">
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow" style="display:block;margin-bottom:14px">The ecosystem</span>
+    <h2 class="reveal" style="font-size:clamp(22px,3vw,34px);margin-bottom:24px">Convened across government, industry, and research.</h2>
+    <div class="reveal" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center">
+      <span class="chip2">QUT</span><span class="chip2">Transport and Main Roads</span><span class="chip2">Brisbane City Council</span><span class="chip2">TransLink</span><span class="chip2">Transmax</span><span class="chip2">Main Roads WA</span><span class="chip2">iMOVE CRC</span>
+    </div>
+  </div>
+</div>
+<style>.chip2{font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--text-mid);border:1px solid var(--line-light);border-radius:3px;padding:13px 22px;background:var(--paper);transition:all .2s}.chip2:hover{border-color:var(--cyan);color:var(--text-dark)}</style>
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand"><svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="1.25" y="1.25" width="45.5" height="45.5" rx="11" fill="#0E1F38"/><line x1="24" y1="24" x2="24" y2="11" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="24" x2="13" y2="34" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="24" x2="35" y2="34" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="11" x2="35" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><line x1="24" y1="11" x2="13" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><line x1="13" y1="34" x2="35" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><circle cx="24" cy="11" r="3" fill="#F4F6FA"/><circle cx="13" cy="34" r="3" fill="#F4F6FA"/><circle cx="35" cy="34" r="3" fill="#F4F6FA"/><circle cx="24" cy="24" r="4.6" fill="#2FB7C9"/></svg><div><div class="logo">Ni<b>F</b>Ti</div><div class="sig">Smarter at every step</div></div></div>
+      <div class="foot-cols">
+        <div class="foot-col"><span class="mono">The hub</span><a href="about.html">About</a><a href="model.html">Operating model</a><a href="foundations.html">Foundations</a></div>
+        <div class="foot-col"><span class="mono">Connect</span><a href="partner.html">Partner with us</a><a href="team.html">Join the team</a><a href="mailto:ashish.bhaskar@qut.edu.au">Contact</a></div>
+        <div class="foot-col"><span class="mono">Take away</span><a href="one-pager.html" target="_blank">View one-pagers</a></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="note">NiFTi (Network Intelligence for Future Transport and Mobility Impacts) is a proposed ARC Research Hub in development, led from QUT. Partner organisations shown are collaborators and prospective partners.</span>
+      <span class="mono">QUT &middot; Brisbane &middot; Australia</span>
+    </div>
+  </div>
+</footer>
+</main>
+</div>
+<script src="nifti.js"></script>
+</body></html>
+
+
+
+

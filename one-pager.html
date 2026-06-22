@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NiFTi One-Pagers &middot; Choose your audience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B1927;--ink2:#0F2136;--cyan:#2FB7C9;--amber:#E8A33D;--paper:#F2F5FA;--white:#fff;--tm:#4A6382;--tl:#94AABF;--line:#E0E8F2;--dsp:'Space Grotesk',sans-serif;--bdy:'IBM Plex Sans',sans-serif;--mono:'IBM Plex Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+a{text-decoration:none;color:inherit}
+body{font-family:var(--bdy);background:var(--ink);min-height:100vh;display:flex;flex-direction:column;align-items:stretch}
+
+/* ── Top bar ── */
+.topbar{padding:18px 40px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.06)}
+.topbar .mark{width:28px;height:28px}
+.topbar .logo{font-family:var(--dsp);font-size:18px;font-weight:700;color:#fff;letter-spacing:-.02em}
+.topbar .logo b{color:var(--cyan)}
+.topbar a{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,170,191,.5);margin-left:auto;transition:color .15s}
+.topbar a:hover{color:var(--cyan)}
+
+/* ── Hero ── */
+.hero{padding:56px 40px 32px;text-align:center}
+.hero .eye{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
+.hero h1{font-family:var(--dsp);font-size:clamp(26px,4vw,40px);font-weight:700;color:#fff;letter-spacing:-.025em;max-width:560px;margin:0 auto 12px;line-height:1.2}
+.hero p{font-size:14.5px;color:var(--tl);max-width:480px;margin:0 auto;line-height:1.6}
+
+/* ── Cards ── */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:32px 40px 56px;max-width:1100px;margin:0 auto;width:100%}
+.card{background:#0C1E34;border:1px solid rgba(47,183,201,.15);border-radius:10px;padding:32px 28px;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{transform:translateY(-5px);border-color:rgba(47,183,201,.5);box-shadow:0 16px 48px rgba(0,0,0,.25)}
+.card-audience{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
+.card-title{font-family:var(--dsp);font-size:21px;font-weight:700;color:#fff;letter-spacing:-.018em;line-height:1.2;margin-bottom:10px}
+.card-desc{font-size:13.5px;color:rgba(148,170,191,.8);line-height:1.6;flex:1;margin-bottom:20px}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+.tag{font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:rgba(148,170,191,.7);background:rgba(47,183,201,.08);border:1px solid rgba(47,183,201,.15);border-radius:3px;padding:4px 8px}
+.card-btn{display:flex;align-items:center;justify-content:space-between;background:var(--cyan);color:#060F1C;font-family:var(--bdy);font-size:13px;font-weight:700;padding:11px 18px;border-radius:6px;transition:opacity .2s}
+.card-btn:hover{opacity:.88}
+.card-btn::after{content:"→";font-size:16px}
+.card.industry .card-btn{background:var(--cyan)}
+.card.academic .card-btn{background:#E8A33D;color:#060F1C}
+.card.govt .card-btn{background:#46B27E;color:#060F1C}
+
+/* ── Divider ── */
+.divider{height:1px;background:rgba(255,255,255,.06);margin:0 40px}
+
+/* ── Note ── */
+.note{text-align:center;padding:24px 40px 40px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:rgba(148,170,191,.35)}
+
+@media(max-width:760px){.cards{grid-template-columns:1fr;padding:24px 20px 40px}.hero{padding:36px 20px 20px}.topbar{padding:14px 20px}}
+</style></head>
+<body>
+
+<div class="topbar">
+  <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="1.25" y="1.25" width="45.5" height="45.5" rx="11" fill="#0E1F38"/><line x1="24" y1="24" x2="24" y2="11" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="24" x2="13" y2="34" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="24" x2="35" y2="34" stroke="#2FB7C9" stroke-width="1.4"/><line x1="24" y1="11" x2="35" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><line x1="24" y1="11" x2="13" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><line x1="13" y1="34" x2="35" y2="34" stroke="rgba(95,216,230,.35)" stroke-width="1"/><circle cx="24" cy="11" r="3" fill="#F4F6FA"/><circle cx="13" cy="34" r="3" fill="#F4F6FA"/><circle cx="35" cy="34" r="3" fill="#F4F6FA"/><circle cx="24" cy="24" r="4.6" fill="#2FB7C9"/></svg>
+  <span class="logo">Ni<b>F</b>Ti</span>
+  <a href="index.html">&larr; Back to website</a>
+</div>
+
+<div class="hero">
+  <div class="eye">NiFTi &middot; One-Pagers</div>
+  <h1>Select the version that fits your context.</h1>
+  <p>Three tailored summaries of NiFTi: each written for a different reader, with different questions in mind.</p>
+</div>
+
+<div class="cards">
+
+  <!-- Industry -->
+  <div class="card industry">
+    <div class="card-audience">For industry and commercial partners</div>
+    <div class="card-title">Deployed tools. Real operations. Proven ROI.</div>
+    <div class="card-desc">Focused on what has been built, what is running in Queensland's network today, and what partnering with NiFTi delivers commercially. Covers the proven tool portfolio, the partnership value proposition, and the Brisbane 2032 opportunity.</div>
+    <div class="card-tags">
+      <span class="tag">Deployed tools</span>
+      <span class="tag">Partnership model</span>
+      <span class="tag">Brisbane 2032</span>
+      <span class="tag">ROI</span>
+      <span class="tag">Implementation</span>
+    </div>
+    <a href="one-pager-industry.html" class="card-btn">View industry one-pager</a>
+  </div>
+
+  <!-- Academic -->
+  <div class="card academic">
+    <div class="card-audience">For academic and research organisations</div>
+    <div class="card-title">Rigorous methodology. Operational data. Research pipeline.</div>
+    <div class="card-desc">Written for research partners, collaborating universities, and PhD candidates. Covers the innovation methodology, the data infrastructure, published outputs, the talent pipeline, and how to collaborate through or alongside NiFTi.</div>
+    <div class="card-tags">
+      <span class="tag">Innovation cycle</span>
+      <span class="tag">Research infrastructure</span>
+      <span class="tag">PhD pipeline</span>
+      <span class="tag">Publications</span>
+      <span class="tag">Collaboration</span>
+    </div>
+    <a href="one-pager-academic.html" class="card-btn">View research one-pager</a>
+  </div>
+
+  <!-- Government/Public -->
+  <div class="card govt">
+    <div class="card-audience">For government and public sector</div>
+    <div class="card-title">Smarter Queensland networks. Public benefit. 2032 readiness.</div>
+    <div class="card-desc">Written for government stakeholders, policymakers, and a general audience. Covers what NiFTi means for Queensland's road network, the government partnership model, the public benefit case, and Brisbane 2032 legacy.</div>
+    <div class="card-tags">
+      <span class="tag">Public benefit</span>
+      <span class="tag">Government partnership</span>
+      <span class="tag">Brisbane 2032</span>
+      <span class="tag">Queensland roads</span>
+      <span class="tag">Outcomes</span>
+    </div>
+    <a href="one-pager-govt.html" class="card-btn">View government one-pager</a>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+<div class="note">NiFTi (Network Intelligence for Future Transport and Mobility Impacts) &middot; Proposed ARC Research Hub &middot; QUT &middot; Brisbane &middot; Australia</div>
+
+</body></html>

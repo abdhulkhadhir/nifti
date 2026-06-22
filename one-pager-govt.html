@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NiFTi &mdash; Government and Public One-Pager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* ================================================================
+   NiFTi One-Pager: GOVERNMENT AND PUBLIC
+   Layout Option C: Magazine/storytelling, full partnership image,
+   public benefit case, accessible language, strategic framing
+   ================================================================ */
+:root{--ink:#0B1927;--ink2:#0F2136;--cyan:#2FB7C9;--green:#46B27E;--amber:#E8A33D;--paper:#F2F5FA;--white:#fff;--line:#E0E8F2;--td:#0B1927;--tm:#4A6382;--tl:#94AABF;--tdim:#6A8099;--dsp:'Space Grotesk',sans-serif;--bdy:'IBM Plex Sans',sans-serif;--mono:'IBM Plex Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+a{text-decoration:none;color:inherit}
+html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+.print-bar{background:#060f1a;padding:10px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:99}
+.print-bar-label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--tl);text-transform:uppercase}
+.print-bar-actions{display:flex;gap:8px;align-items:center}
+.print-bar a{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--tl);padding:6px 12px;border:1px solid rgba(255,255,255,.1);border-radius:3px}
+.print-btn{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:#46B27E;color:var(--white);border:none;padding:7px 16px;border-radius:3px;cursor:pointer}
+
+.page{width:794px;margin:20px auto;background:var(--white);box-shadow:0 4px 48px rgba(0,0,0,.35);overflow:hidden;font-size:10.5px;line-height:1.5}
+
+/* ── HEADER: split layout with partnership image ── */
+.op-header{position:relative;background:var(--ink);overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;min-height:155px}
+.op-hbg-img{background:url('assets/images/partnership-ecosystem.png') center/cover no-repeat;min-height:155px}
+.op-hbg-overlay{background:linear-gradient(to right,transparent 0%,rgba(11,25,39,.4) 40%,rgba(11,25,39,.85) 70%,var(--ink) 100%)}
+.op-hcontent{padding:22px 26px 20px 20px;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center}
+.op-toprow{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.op-brand{display:flex;align-items:center;gap:9px}
+.op-svgmark{width:28px;height:28px}
+.op-wordmark{font-family:var(--dsp);font-size:20px;font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1}
+.op-wordmark b{color:var(--green)}
+.op-fullname{font-family:var(--mono);font-size:7px;letter-spacing:.09em;text-transform:uppercase;color:var(--tl);margin-top:3px;max-width:180px}
+.op-badge{font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);border:1px solid rgba(70,178,126,.3);padding:4px 9px;border-radius:3px;white-space:nowrap}
+.op-audience-badge{font-family:var(--mono);font-size:7.5px;letter-spacing:.1em;text-transform:uppercase;background:rgba(70,178,126,.15);color:var(--green);padding:3px 8px;border-radius:2px;display:inline-block;margin-bottom:7px}
+.op-headline{font-family:var(--dsp);font-size:20px;font-weight:700;color:#fff;letter-spacing:-.022em;line-height:1.2;max-width:340px;margin-bottom:7px}
+.op-headline .ac{color:var(--green)}
+.op-lede{font-size:10px;color:var(--tl);max-width:340px;line-height:1.5}
+/* Caption below image */
+.partner-caption{background:#071320;padding:4px 12px;display:grid;grid-template-columns:1.1fr 1fr}
+.pc-left{font-size:7.5px;color:rgba(70,178,126,.7);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 0 4px 8px}
+.pc-right{font-size:7.5px;color:rgba(148,170,191,.5);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 0;text-align:right}
+
+/* ── METRICS BAND ── */
+.metrics-band{background:#071320;border-top:1px solid rgba(70,178,126,.15);border-bottom:1px solid rgba(70,178,126,.15);padding:9px 30px;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.mstat{text-align:center;padding:3px 0;border-right:1px solid rgba(70,178,126,.1)}
+.mstat:last-child{border-right:none}
+.mstat-val{font-family:var(--dsp);font-size:20px;font-weight:700;color:var(--green);letter-spacing:-.025em;line-height:1}
+.mstat-lbl{font-family:var(--mono);font-size:7px;letter-spacing:.08em;text-transform:uppercase;color:rgba(148,170,191,.55);margin-top:2px}
+
+/* ── BODY: 2 columns ── */
+.op-body{display:grid;grid-template-columns:1.15fr 1fr;border-top:1px solid var(--line)}
+.op-col{padding:16px 20px;border-right:1px solid var(--line)}
+.op-col:last-child{border-right:none}
+.slabel{font-family:var(--mono);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:5px}
+.stitle{font-family:var(--dsp);font-size:13px;font-weight:700;color:var(--td);letter-spacing:-.015em;margin-bottom:10px;line-height:1.25}
+.div{height:1px;background:var(--line);margin:10px 0}
+
+/* Story blocks */
+.story-block{margin-bottom:10px}
+.story-block h3{font-family:var(--dsp);font-size:11.5px;font-weight:700;color:var(--td);margin-bottom:4px}
+.story-block p{font-size:9.5px;color:var(--tm);line-height:1.55}
+
+/* Outcome items */
+.outcome-item{display:flex;gap:9px;margin-bottom:7px;align-items:flex-start}
+.out-icon{width:22px;height:22px;border-radius:3px;background:rgba(70,178,126,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;color:var(--green)}
+.out-text{flex:1}
+.out-title{font-family:var(--dsp);font-size:10px;font-weight:700;color:var(--td);margin-bottom:2px}
+.out-desc{font-size:8.5px;color:var(--tm);line-height:1.45}
+
+/* Screenshot */
+.sc-frame{border:1px solid var(--line);border-radius:4px;overflow:hidden;margin:8px 0}
+.sc-frame-bar{height:9px;background:#f0f0f0;display:flex;align-items:center;padding:0 6px;gap:3px}
+.sc-frame-bar::before,.sc-frame-bar::after{content:"";width:5px;height:5px;border-radius:50%}
+.sc-frame-bar::before{background:#FC5F56}
+.sc-frame-bar::after{background:#FDBD2E}
+.sc-frame img{width:100%;display:block}
+.cap{font-family:var(--mono);font-size:7px;letter-spacing:.05em;text-transform:uppercase;color:var(--tdim);margin-top:3px;text-align:center}
+
+/* Innovation cycle (vertical, right col) */
+.cycle-step{display:flex;gap:8px;margin-bottom:8px;position:relative;padding-left:0}
+.cs-line{width:1px;background:rgba(70,178,126,.25);position:absolute;left:9px;top:20px;bottom:-8px}
+.cycle-step:last-child .cs-line{display:none}
+.cs-dot{width:20px;height:20px;border-radius:50%;background:rgba(70,178,126,.12);border:1px solid rgba(70,178,126,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--dsp);font-size:8.5px;font-weight:700;color:var(--green)}
+.cs-content{}
+.cs-title{font-family:var(--dsp);font-size:10px;font-weight:700;color:var(--td);margin-bottom:1px}
+.cs-desc{font-size:8.5px;color:var(--tm);line-height:1.4}
+
+/* Partnership model */
+.partner-row{display:flex;gap:8px;margin-bottom:7px;align-items:flex-start}
+.pr-badge{font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-radius:3px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.pr-badge.govt{background:rgba(70,178,126,.12);color:#2C8159}
+.pr-badge.ind{background:rgba(47,183,201,.12);color:#1C8294}
+.pr-badge.uni{background:rgba(232,163,61,.12);color:#B5781F}
+.pr-text{font-size:9px;color:var(--tm);line-height:1.45}
+.pr-text b{color:var(--td);font-weight:600}
+
+/* Brisbane callout */
+.brisbane-callout{background:var(--ink2);border-radius:5px;padding:12px 14px;margin:10px 0;border-left:3px solid var(--green)}
+.bc-lbl{font-family:var(--mono);font-size:7.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:5px}
+.bc-hl{font-family:var(--dsp);font-size:15px;font-weight:700;color:#fff;margin-bottom:5px;letter-spacing:-.015em}
+.bc-text{font-size:9px;color:rgba(148,170,191,.85);line-height:1.5}
+
+/* Ecosystem */
+.eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:10px}
+.eco-item{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:5px 8px;font-family:var(--mono);font-size:8px;letter-spacing:.04em;color:var(--tm)}
+
+/* CTA */
+.cta-box{background:var(--green);border-radius:4px;padding:10px 12px}
+.cta-title{font-family:var(--dsp);font-size:12px;font-weight:700;color:#fff;margin-bottom:4px}
+.cta-text{font-size:9px;color:rgba(255,255,255,.8);line-height:1.45;margin-bottom:6px}
+.cta-email{font-family:var(--mono);font-size:9.5px;color:#fff;font-weight:600;display:block}
+
+/* Footer */
+.op-footer{background:var(--ink);padding:10px 30px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.op-foot-note{font-size:7px;color:var(--tdim);max-width:430px;line-height:1.5}
+.op-foot-right{text-align:right;flex-shrink:0}
+.op-foot-email{font-family:var(--mono);font-size:8.5px;color:var(--green);display:block;margin-bottom:3px}
+.op-foot-qut{font-family:var(--mono);font-size:7px;letter-spacing:.1em;color:var(--tdim);text-transform:uppercase}
+
+/* ── COMPACT: enforce A4 single page ── */
+.page{height:1122px;overflow:hidden}
+.op-header{min-height:130px}
+.op-hbg-img{min-height:130px}
+.op-hcontent{padding:16px 22px 16px 18px}
+.op-headline{font-size:17px;margin-bottom:5px}
+.op-lede{font-size:9.5px}
+.partner-caption{padding:0}
+.pc-left,.pc-right{padding:3px 0}
+.metrics-band{padding:6px 28px}
+.mstat-val{font-size:17px}
+.op-col{padding:10px 13px}
+.slabel{margin-bottom:3px}
+.stitle{font-size:12px;margin-bottom:7px;line-height:1.2}
+.div{margin:6px 0}
+.story-block{margin-bottom:7px}
+.story-block p{font-size:9px}
+.outcome-item{margin-bottom:5px}
+.out-desc{font-size:8.5px}
+.out-title{font-size:9.5px}
+.partner-row{margin-bottom:5px}
+.pr-text{font-size:8.5px}
+.cycle-step{margin-bottom:6px}
+.cs-desc{font-size:8px}
+.brisbane-callout{padding:9px 12px;margin:7px 0}
+.bc-hl{font-size:13px;margin-bottom:4px}
+.bc-text{font-size:8.5px}
+.eco-grid{gap:4px;margin-bottom:7px}
+.cta-box{padding:8px 10px}
+.cta-text{font-size:8.5px;margin-bottom:4px}
+@media print{html,body{background:white}.print-bar{display:none!important}.page{margin:0;box-shadow:none;width:100%;height:1122px;overflow:hidden}@page{size:A4 portrait;margin:0}}
+@media screen and (max-width:834px){body{background:white}.page{width:100%;margin:0;box-shadow:none}.op-header{grid-template-columns:1fr}.op-hbg-img{display:none}.op-body{grid-template-columns:1fr}.op-col{border-right:none;border-bottom:1px solid var(--line)}}
+</style></head>
+<body>
+
+<div class="print-bar">
+  <span class="print-bar-label">NiFTi &mdash; Government and Public One-Pager</span>
+  <div class="print-bar-actions">
+    <a href="one-pager.html">All one-pagers</a>
+    <a href="index.html">Back to website</a>
+    <button class="print-btn" onclick="window.print()">Save as PDF</button>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- HEADER: split with partnership image on left, text on right -->
+  <header class="op-header">
+    <div class="op-hbg-img">
+      <div class="op-hbg-overlay"></div>
+    </div>
+    <div class="op-hcontent">
+      <div class="op-toprow">
+        <div class="op-brand">
+          <svg class="op-svgmark" viewBox="0 0 48 48"><rect x="1.25" y="1.25" width="45.5" height="45.5" rx="11" fill="#0E1F38"/><line x1="24" y1="24" x2="24" y2="11" stroke="#46B27E" stroke-width="1.4"/><line x1="24" y1="24" x2="13" y2="34" stroke="#46B27E" stroke-width="1.4"/><line x1="24" y1="24" x2="35" y2="34" stroke="#46B27E" stroke-width="1.4"/><line x1="24" y1="11" x2="35" y2="34" stroke="rgba(70,178,126,.35)" stroke-width="1"/><line x1="24" y1="11" x2="13" y2="34" stroke="rgba(70,178,126,.35)" stroke-width="1"/><line x1="13" y1="34" x2="35" y2="34" stroke="rgba(70,178,126,.35)" stroke-width="1"/><circle cx="24" cy="11" r="3" fill="#F4F6FA"/><circle cx="13" cy="34" r="3" fill="#F4F6FA"/><circle cx="35" cy="34" r="3" fill="#F4F6FA"/><circle cx="24" cy="24" r="4.6" fill="#46B27E"/></svg>
+          <div><div class="op-wordmark">Ni<b>F</b>Ti</div><div class="op-fullname">Network Intelligence for Future Transport and Mobility Impacts</div></div>
+        </div>
+        <div class="op-badge">ARC Research Hub &middot; QUT</div>
+      </div>
+      <div class="op-audience-badge">Government and public sector</div>
+      <h1 class="op-headline">Smarter Queensland roads.<br><span class="ac">Research, operations, and public benefit together.</span></h1>
+      <p class="op-lede">NiFTi brings government, industry, and academia to the same table to build transport intelligence that is grounded in how the network actually works, co-owned from day one, and built to last beyond any single project.</p>
+    </div>
+  </header>
+  <div class="partner-caption">
+    <div class="pc-left">Government &middot; Industry &middot; Academia</div>
+    <div class="pc-right">Proposed ARC Research Hub &middot; Queensland University of Technology</div>
+  </div>
+
+  <!-- METRICS BAND -->
+  <div class="metrics-band">
+    <div class="mstat"><div class="mstat-val">5+</div><div class="mstat-lbl">Tools in Queensland operations</div></div>
+    <div class="mstat"><div class="mstat-val">10+</div><div class="mstat-lbl">Years partnership research</div></div>
+    <div class="mstat"><div class="mstat-val">7</div><div class="mstat-lbl">Government and industry partners</div></div>
+    <div class="mstat"><div class="mstat-val">2032</div><div class="mstat-lbl">Brisbane Olympic readiness</div></div>
+  </div>
+
+  <!-- BODY -->
+  <div class="op-body">
+
+    <!-- COL 1: The story + outcomes + tools -->
+    <div class="op-col">
+
+      <span class="slabel">What NiFTi is</span>
+      <div class="stitle">A permanent capability hub for Queensland's transport network.</div>
+
+      <div class="story-block">
+        <p>NiFTi gives Queensland's network operators better tools, better data, and better decision support. It is co-owned from day one: government agencies define the problems and bring operational data; researchers build the tools; industry deploys them. The result is research that sticks in operations, not research that sits on a shelf.</p>
+      </div>
+
+      <div class="div"></div>
+
+      <span class="slabel">What it delivers for Queensland</span>
+
+      <div class="outcome-item">
+        <div class="out-icon">&#9650;</div>
+        <div class="out-text">
+          <div class="out-title">A safer, more responsive network</div>
+          <div class="out-desc">Weather-responsive VSL triggers speed reductions before conditions deteriorate. Crash-risk modelling turns live data into proactive safety management. Already in development with TMR.</div>
+        </div>
+      </div>
+
+      <div class="outcome-item">
+        <div class="out-icon">&#9670;</div>
+        <div class="out-text">
+          <div class="out-title">Better information for operators</div>
+          <div class="out-desc">ANSPA gives operators a clear corridor performance picture: where congestion is building, which routes are performing, what changed since yesterday. Decisions made with data, not guesswork.</div>
+        </div>
+      </div>
+
+      <div class="outcome-item">
+        <div class="out-icon">&#9632;</div>
+        <div class="out-text">
+          <div class="out-title">Road and public transport together</div>
+          <div class="out-desc">GLiVe and ANSPA combine road and transit data in a single performance view. Operators see bus and road performance on the same corridor in the same dashboard for the first time.</div>
+        </div>
+      </div>
+
+      <div class="outcome-item">
+        <div class="out-icon">&#9670;</div>
+        <div class="out-text">
+          <div class="out-title">Preserving decades of operational expertise</div>
+          <div class="out-desc">InteliAgent captures tacit knowledge of experienced engineers in a queryable digital format, so a junior operator can draw on 30 years of network experience even after those engineers retire.</div>
+        </div>
+      </div>
+
+      <div class="div"></div>
+
+      <span class="slabel">Tools in operations today</span>
+      <div class="sc-frame">
+        <div class="sc-frame-bar"></div>
+        <img src="assets/images/anspa-dashboard.png" alt="ANSPA arterial coordination health assessment dashboard showing Queensland corridor performance" loading="lazy">
+      </div>
+      <div class="cap">ANSPA &mdash; Arterial coordination health assessment tool (TMR partnership)</div>
+
+    </div>
+
+    <!-- COL 2: Partnership model + cycle + Brisbane + CTA -->
+    <div class="op-col">
+
+      <span class="slabel">How the partnership works</span>
+      <div class="stitle">Three partners. One shared table. Co-owned from day one.</div>
+
+      <div class="partner-row">
+        <span class="pr-badge govt">Government</span>
+        <div class="pr-text"><b>Defines problems, provides operational data.</b> Agencies bring the real network problems and the data to test solutions against.</div>
+      </div>
+      <div class="partner-row">
+        <span class="pr-badge uni">University</span>
+        <div class="pr-text"><b>Research depth and talent pipeline.</b> QUT researchers and PhD students bring rigour and the next generation of transport engineers.</div>
+      </div>
+      <div class="partner-row">
+        <span class="pr-badge ind">Industry</span>
+        <div class="pr-text"><b>Bridges research and deployment.</b> Deployment infrastructure and a pathway from research prototype to live network operation.</div>
+      </div>
+
+      <div class="div"></div>
+
+      <span class="slabel">The innovation approach</span>
+      <div class="stitle" style="font-size:11px">Research designed to reach operations, not stop at publication.</div>
+
+      <div class="cycle-step">
+        <div class="cs-dot">1</div>
+        <div class="cs-line"></div>
+        <div class="cs-content"><div class="cs-title">Define the problem together</div><div class="cs-desc">Government operators and researchers co-define the problem and what a good outcome looks like before any research begins.</div></div>
+      </div>
+      <div class="cycle-step">
+        <div class="cs-dot">2</div>
+        <div class="cs-line"></div>
+        <div class="cs-content"><div class="cs-title">Research and test on real sites</div><div class="cs-desc">Solutions are developed and tested on real Queensland infrastructure or operational datasets.</div></div>
+      </div>
+      <div class="cycle-step">
+        <div class="cs-dot">3</div>
+        <div class="cs-line"></div>
+        <div class="cs-content"><div class="cs-title">Honest evaluation</div><div class="cs-desc">If something does not work, that finding is reported and learned from. Rigour is non-negotiable.</div></div>
+      </div>
+      <div class="cycle-step">
+        <div class="cs-dot">4</div>
+        <div class="cs-content"><div class="cs-title">Move what works into operations</div><div class="cs-desc">The path from research to deployment is planned from day one. What the hub builds is built to run on the network.</div></div>
+      </div>
+
+      <div class="div"></div>
+
+      <div class="brisbane-callout">
+        <div class="bc-lbl">Brisbane 2032</div>
+        <div class="bc-hl">The stress test for Queensland transport.</div>
+        <div class="bc-text">The Olympics will put the network under globally visible, concentrated demand. NiFTi is building the tools and capability that make 2032 manageable and that will continue delivering for Queensland commuters long after the Games.</div>
+      </div>
+
+      <div class="div"></div>
+
+      <span class="slabel">Current partners</span>
+      <div class="eco-grid">
+        <div class="eco-item">Queensland TMR</div>
+        <div class="eco-item">Brisbane City Council</div>
+        <div class="eco-item">TransLink</div>
+        <div class="eco-item">Transmax</div>
+        <div class="eco-item">iMOVE CRC</div>
+        <div class="eco-item">Main Roads WA</div>
+      </div>
+
+      <div class="cta-box">
+        <div class="cta-title">Discuss partnership with NiFTi.</div>
+        <div class="cta-text">Government agencies, public bodies, and policy organisations are welcome to explore partnership and collaboration with the hub.</div>
+        <a href="mailto:ashish.bhaskar@qut.edu.au" class="cta-email">ashish.bhaskar@qut.edu.au</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="op-footer">
+    <div class="op-foot-note">NiFTi (Network Intelligence for Future Transport and Mobility Impacts) is a proposed ARC Research Hub in development, led from the Intelligent Transport Systems group at QUT. All partner organisations are current collaborators or prospective partners. ARC Research Hub funding is subject to competitive application and approval processes.</div>
+    <div class="op-foot-right"><span class="op-foot-email">ashish.bhaskar@qut.edu.au</span><span class="op-foot-qut">QUT &middot; Brisbane &middot; Australia</span></div>
+  </footer>
+
+</div>
+</body></html>

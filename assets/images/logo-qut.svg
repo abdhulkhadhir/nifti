@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <rect width="200" height="60" rx="4" fill="#1e2d3d"/>
+  <text x="28" y="40" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff">QUT</text>
+  <text x="92" y="36" font-family="Arial, sans-serif" font-size="9.5" fill="#94aabf">Queensland University</text>
+  <text x="92" y="48" font-family="Arial, sans-serif" font-size="9.5" fill="#94aabf">of Technology</text>
+</svg>
