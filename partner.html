@@ -18,6 +18,13 @@
 .contact-band h3{color:#fff;font-size:24px;margin-bottom:8px}.contact-band p{color:var(--text-light)}
 .contact-band a.email{font-family:var(--mono);font-size:15px;color:var(--cyan)}
 @media(max-width:880px){.way-head{grid-template-columns:1fr;gap:8px}.contact-band{flex-direction:column;align-items:flex-start}}
+.voices-section{margin-top:40px}
+.voices-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+.voice-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:6px;padding:28px 26px;display:flex;flex-direction:column}
+.voice-mark{font-family:var(--display);font-size:52px;color:var(--cyan);opacity:.35;line-height:.75;margin-bottom:12px;flex-shrink:0}
+.voice-text{font-size:15px;color:var(--text-light);line-height:1.75;font-style:italic;margin-bottom:18px;flex:1}
+.voice-attr{font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--text-mid);border-top:1px solid var(--line-dark);padding-top:12px;line-height:1.5}
+@media(max-width:680px){.voices-grid{grid-template-columns:1fr}}
 </style></head>
 <body>
 <nav class="top-bar" id="topBar">
@@ -62,6 +69,33 @@
         <div class="way-benefits"><span class="benefit-tag">PhD / MPhil programs</span><span class="benefit-tag">Industry-embedded fellowships</span><span class="benefit-tag">Operational data access</span><span class="benefit-tag">Dual supervision</span></div>
       </div>
     </div>
+    <div class="voices-section reveal">
+      <span class="eyebrow" style="display:block;margin-bottom:6px">From the people we work with</span>
+      <h2 style="font-size:clamp(20px,2.8vw,30px);margin-bottom:24px">Voices from the field.</h2>
+      <div class="voices-grid">
+        <div class="voice-card">
+          <div class="voice-mark">&ldquo;</div>
+          <p class="voice-text">I don't see it as an industry challenge. I don't see it as your challenge. I see it as our challenge. We all went into engineering or planning to get involved in exciting things and we all played different roles.</p>
+          <div class="voice-attr">GM, Integrated Network Operations<br>Department of Transport and Main Roads</div>
+        </div>
+        <div class="voice-card">
+          <div class="voice-mark">&ldquo;</div>
+          <p class="voice-text">What we might need is some kind of innovation framework that provides the general structure around by which we do these things. Because it's not just a test bed. It's not just data. It's not just technology. It's actually how we work together collectively to turn a great idea, do the practical work, validate that it works, and turn it into something we ideally use.</p>
+          <div class="voice-attr">Senior Manager, Network Operations<br>Department of Transport and Main Roads</div>
+        </div>
+        <div class="voice-card">
+          <div class="voice-mark">&ldquo;</div>
+          <p class="voice-text">Getting published in the flagship transport research global journal is pretty significant. Success with our QUT partnership.</p>
+          <div class="voice-attr">Manager, Traffic Signals Programs<br>Department of Transport and Main Roads</div>
+        </div>
+        <div class="voice-card">
+          <div class="voice-mark">&ldquo;</div>
+          <p class="voice-text">I find this stuff fascinating. And I like the fact it's called a Decision Support System &mdash; that's what it's there for, it's to help us.</p>
+          <div class="voice-attr">GM, Integrated Network Operations<br>Department of Transport and Main Roads</div>
+        </div>
+      </div>
+    </div>
+
     <div class="contact-band reveal">
       <div><h3>Start a conversation</h3><p>We would like to scope this together.</p></div>
       <div style="text-align:right"><a class="email" href="mailto:ashish.bhaskar@qut.edu.au">ashish.bhaskar@qut.edu.au</a><div style="margin-top:14px"><a class="btn btn-primary" href="one-pager.html" target="_blank">View one-pager &rarr;</a></div></div>

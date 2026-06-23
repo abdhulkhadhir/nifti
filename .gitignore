@@ -1,3 +1,5 @@
 assets/pptx_extract/
 *.pptx
 *.pdf
+INO_Meeting_transcript.txt
+*.txt
