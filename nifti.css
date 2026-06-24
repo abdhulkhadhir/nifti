@@ -1067,3 +1067,20 @@ section:not(.dark) {
   to   { transform: translateX(-50%); }
 }
 @media (max-width: 600px) { .logo-track { animation-duration: 40s; } }
+
+/* Partner logo strip */
+.partner-logo {
+  height: 44px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  opacity: .92;
+  flex-shrink: 0;
+}
+.partner-logo--light {
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  height: 40px;
+}
+.logo-track .partner-logo--tall { height: 48px; }
