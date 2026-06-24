@@ -1046,3 +1046,24 @@ section:not(.dark) {
 /* Light mode: dark sections remain dark */
 [data-theme="light"] section.dark,
 [data-theme="light"] .team-section.dark { background: var(--ink); }
+
+/* ── Logo marquee ────────────────────────────────────────── */
+.logo-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
+}
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: logoScroll 28s linear infinite;
+  gap: 52px;
+  align-items: center;
+  padding: 4px 0;
+}
+.logo-track:hover { animation-play-state: paused; }
+@keyframes logoScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (max-width: 600px) { .logo-track { animation-duration: 40s; } }

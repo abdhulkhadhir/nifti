@@ -1,6 +1,17 @@
 ﻿<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Proven foundations &middot; NiFTi</title>
+<meta name="description" content="A decade of deployed transport research tools: OPTIMA, ANSPA, GLiVe, InteliAgent, WiSe, and more — built with Queensland government and industry partners.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NiFTi Research Hub">
+<meta property="og:title" content="Proven Foundations | NiFTi Research Hub">
+<meta property="og:description" content="A decade of deployed transport research tools: OPTIMA, ANSPA, GLiVe, InteliAgent, WiSe, and more — built with Queensland government and industry partners.">
+<meta property="og:url" content="https://abdhulkhadhir.github.io/nifti/foundations.html">
+<meta property="og:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero-smart-highway.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Proven Foundations | NiFTi Research Hub">
+<meta name="twitter:description" content="A decade of deployed transport research tools: OPTIMA, ANSPA, GLiVe, InteliAgent, WiSe, and more — built with Queensland government and industry partners.">
+<meta name="twitter:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero-smart-highway.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="nifti.css">
@@ -17,6 +28,11 @@
 .work .role{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--text-mid);text-transform:uppercase;margin-bottom:12px}
 .work p{font-size:14.5px;color:var(--text-mid)}
 .work-note{margin-top:30px;font-size:16px;color:var(--text-mid);max-width:64ch}.work-note b{color:var(--text-dark);font-weight:600}
+/* Filter bar */
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.filter-chip{font-family:var(--mono);font-size:11px;letter-spacing:.07em;padding:5px 14px;border-radius:99px;border:1px solid var(--line-light);color:var(--text-mid);cursor:pointer;transition:all .15s;background:transparent}
+.filter-chip.active,.filter-chip:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(47,183,201,.08)}
+.work.hidden{display:none}
 @media(max-width:880px){.work-grid{grid-template-columns:1fr}}
 </style></head>
 <body>
@@ -48,15 +64,25 @@
 <main class="site-main"><header class="pagehead"><div class="glow"></div><div class="wrap"><span class="eyebrow">Proven foundations</span><h1>Built on a decade of delivered work.</h1><p>NiFTi is not a standing start. Its founding team has already built and deployed pieces of all three layers, with government and industry partners.</p></div></header>
 <section>
   <div class="wrap">
-    <div class="work-grid">
-      <div class="work reveal"><div class="top"><span class="name">OPTIMA</span><span class="status deployed">Deployed</span></div><div class="role">Motorway algorithm calibration</div><p>Automated calibration of motorway control algorithms, removing the manual tuning burden. Delivers interfaces, tools, and dashboards that make algorithm behaviour transparent, enabling knowledge transfer so operators understand not just what the algorithm does, but why.</p></div>
-      <div class="work reveal"><div class="top"><span class="name">ANSPA</span><span class="status pub">Ongoing project</span></div><div class="role">Arterial network performance</div><p>Multimodal arterial performance measurement, fusing signal, probe, transit, and Bluetooth data into one performance picture. Currently in active development, not yet in live operations.</p></div>
-      <div class="work reveal"><div class="top"><span class="name">S-curve</span><span class="status pub">Published</span></div><div class="role">Before-and-after evaluation</div><p>A method to quantify the value of an operational change. In use within TMR and integrated into ANSPA. Co-published with industry in Transport Research Record, a joint paper with our government partners, not just by academia.</p></div>
-      <div class="work reveal"><div class="top"><span class="name">WiSe / WRVSL</span><span class="status live">In development</span></div><div class="role">Weather-responsive control</div><p>Real-time weather-responsive variable speed limits that adapt to live conditions on the network. Incorporates crash-risk modelling alongside weather signals, acting before conditions deteriorate rather than after.</p></div>
-      <div class="work reveal"><div class="top"><span class="name">SPARC</span><span class="status deployed">With BCC</span></div><div class="role">Performance assessment</div><p>A scalable performance assessment framework developed with Brisbane City Council, turning raw operational data into decision-ready insight.</p></div>
-      <div class="work reveal"><div class="top"><span class="name">GLiVe</span><span class="status live">Live</span></div><div class="role">Real-time transit intelligence</div><p>A live public transport monitoring platform ingesting 25 GB/day of GTFS vehicle positions, incident feeds, and AFC data across the Brisbane network. Provides operators with real-time situational awareness at 2 - 10 second resolution across buses, trains, and CityCats. <a href="https://glive.qut.edu.au/" target="_blank" rel="noopener" style="color:var(--cyan);font-family:var(--mono);font-size:12px;display:inline-block;margin-top:8px">Visit GLiVe &rarr;</a></p></div>
-      <div class="work reveal"><div class="top"><span class="name">InteliAgent</span><span class="status live">In development</span></div><div class="role">AI decision support</div><p>An LLM-backed agentic system designed to capture and operationalise institutional knowledge held by experienced traffic engineers. Enables scenario testing, precedent retrieval, and explainable recommendations, so that expertise is not lost when people move on.</p></div>
-      <div class="work reveal" style="background:var(--ink-2);border-color:var(--line-dark)"><div class="top"><span class="name" style="color:#fff">The pipeline</span></div><div class="role" style="color:var(--cyan)">What the hub takes on next</div><p style="color:var(--text-light)">Motorway algorithm cascades, multi-agency data integration, and full operationalisation of the InteliAgent decision-support system.</p></div>
+    <div class="filter-bar" id="filterBar" aria-label="Filter tools by category">
+      <button class="filter-chip active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="live">Live</button>
+      <button class="filter-chip" data-filter="development">In development</button>
+      <button class="filter-chip" data-filter="deployed">Deployed</button>
+      <button class="filter-chip" data-filter="published">Published</button>
+      <button class="filter-chip" data-filter="motorway">Motorway</button>
+      <button class="filter-chip" data-filter="arterial">Arterial</button>
+      <button class="filter-chip" data-filter="transit">Transit</button>
+    </div>
+    <div class="work-grid" id="workGrid">
+      <div class="work reveal" data-tags="motorway,deployed"><div class="top"><span class="name">OPTIMA</span><span class="status deployed">Deployed</span></div><div class="role">Motorway algorithm calibration</div><p>Automated calibration of motorway control algorithms, removing the manual tuning burden. Delivers interfaces, tools, and dashboards that make algorithm behaviour transparent, enabling knowledge transfer so operators understand not just what the algorithm does, but why.</p></div>
+      <div class="work reveal" data-tags="arterial,ongoing"><div class="top"><span class="name">ANSPA</span><span class="status pub">Ongoing project</span></div><div class="role">Arterial network performance</div><p>Multimodal arterial performance measurement, fusing signal, probe, transit, and Bluetooth data into one performance picture. Currently in active development, not yet in live operations.</p></div>
+      <div class="work reveal" data-tags="arterial,published"><div class="top"><span class="name">S-curve</span><span class="status pub">Published</span></div><div class="role">Before-and-after evaluation</div><p>A method to quantify the value of an operational change. In use within TMR and integrated into ANSPA. Co-published with industry in Transport Research Record, a joint paper with our government partners, not just by academia.</p></div>
+      <div class="work reveal" data-tags="motorway,development"><div class="top"><span class="name">WiSe / WRVSL</span><span class="status live">In development</span></div><div class="role">Weather-responsive control</div><p>Real-time weather-responsive variable speed limits that adapt to live conditions on the network. Incorporates crash-risk modelling alongside weather signals, acting before conditions deteriorate rather than after.</p></div>
+      <div class="work reveal" data-tags="arterial,deployed"><div class="top"><span class="name">SPARC</span><span class="status deployed">With BCC</span></div><div class="role">Performance assessment</div><p>A scalable performance assessment framework developed with Brisbane City Council, turning raw operational data into decision-ready insight.</p></div>
+      <div class="work reveal" data-tags="transit,live"><div class="top"><span class="name">GLiVe</span><span class="status live">Live</span></div><div class="role">Real-time transit intelligence</div><p>A live public transport monitoring platform ingesting 25 GB/day of GTFS vehicle positions, incident feeds, and AFC data across the Brisbane network. Provides operators with real-time situational awareness at 2 - 10 second resolution across buses, trains, and CityCats. <a href="https://glive.qut.edu.au/" target="_blank" rel="noopener" style="color:var(--cyan);font-family:var(--mono);font-size:12px;display:inline-block;margin-top:8px">Visit GLiVe &rarr;</a></p></div>
+      <div class="work reveal" data-tags="development"><div class="top"><span class="name">InteliAgent</span><span class="status live">In development</span></div><div class="role">AI decision support</div><p>An LLM-backed agentic system designed to capture and operationalise institutional knowledge held by experienced traffic engineers. Enables scenario testing, precedent retrieval, and explainable recommendations, so that expertise is not lost when people move on.</p></div>
+      <div class="work reveal" data-tags="future" style="background:var(--ink-2);border-color:var(--line-dark)"><div class="top"><span class="name" style="color:#fff">The pipeline</span></div><div class="role" style="color:var(--cyan)">What the hub takes on next</div><p style="color:var(--text-light)">Motorway algorithm cascades, multi-agency data integration, and full operationalisation of the InteliAgent decision-support system.</p></div>
     </div>
     <p class="work-note reveal">The pattern the hub is built to repeat: <b>research that gets adopted, deployed, and validated in operations</b>, with our partners' names on it.</p>
   </div>
@@ -152,6 +178,24 @@
 </main>
 </div>
 <script src="nifti.js"></script>
+<script>
+/* ── Tool filter bar ─────────────────────────────────────── */
+document.querySelectorAll('.filter-chip').forEach(function(chip) {
+  chip.addEventListener('click', function() {
+    document.querySelectorAll('.filter-chip').forEach(function(c) { c.classList.remove('active'); });
+    chip.classList.add('active');
+    var filter = chip.dataset.filter;
+    document.querySelectorAll('#workGrid .work').forEach(function(card) {
+      if (filter === 'all' || card.dataset.tags === 'future') {
+        card.classList.remove('hidden');
+      } else {
+        var tags = card.dataset.tags ? card.dataset.tags.split(',') : [];
+        card.classList.toggle('hidden', !tags.includes(filter));
+      }
+    });
+  });
+});
+</script>
 </body></html>
 
 
