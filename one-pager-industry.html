@@ -7,11 +7,11 @@
 <meta property="og:title" content="Industry One-Pager | NiFTi Research Hub">
 <meta property="og:description" content="NiFTi one-pager for industry partners: deployed tools, measurable outcomes, and partnership opportunities to co-develop transport intelligence solutions.">
 <meta property="og:url" content="https://abdhulkhadhir.github.io/nifti/one-pager-industry.html">
-<meta property="og:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero-smart-highway.png">
+<meta property="og:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero_one_pager_indstry.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Industry One-Pager | NiFTi Research Hub">
 <meta name="twitter:description" content="NiFTi one-pager for industry partners: deployed tools, measurable outcomes, and partnership opportunities to co-develop transport intelligence solutions.">
-<meta name="twitter:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero-smart-highway.png">
+<meta name="twitter:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero_one_pager_indstry.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
@@ -34,10 +34,12 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 .page{width:794px;margin:20px auto;background:var(--white);box-shadow:0 4px 48px rgba(0,0,0,.35);overflow:hidden;font-size:10.5px;line-height:1.5}
 
 /* ── HEADER ── */
-.op-header{position:relative;background:var(--ink);padding:22px 30px 20px;overflow:hidden}
-.op-hbg{position:absolute;inset:0;background:url('assets/images/hero-smart-highway.png') 8% 48%/cover no-repeat;opacity:.20;filter:saturate(.55) brightness(.85)}
-.op-hglow{position:absolute;right:-5%;top:-40%;width:55%;height:200%;background:radial-gradient(ellipse,rgba(47,183,201,.18) 0%,transparent 65%);pointer-events:none}
-.op-hcontent{position:relative;z-index:2}
+.op-header{position:relative;background:var(--ink);overflow:hidden;display:grid;grid-template-columns:1.05fr 1fr;min-height:132px}
+.op-hbg-img{background:url('assets/images/hero_one_pager_indstry.png') center/cover no-repeat;min-height:132px;position:relative}
+.op-hbg-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 0%,rgba(11,25,39,.15) 55%,var(--ink) 100%)}
+.op-hcontent{padding:14px 24px 12px 16px;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center}
+.op-hbg{display:none}
+.op-hglow{position:absolute;right:-5%;top:-40%;width:55%;height:200%;background:radial-gradient(ellipse,rgba(47,183,201,.12) 0%,transparent 65%);pointer-events:none;z-index:1}
 .op-toprow{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
 .op-brand{display:flex;align-items:center;gap:10px}
 .op-svgmark{width:30px;height:30px}
@@ -146,8 +148,11 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 
 /* ── COMPACT: enforce A4 single page ── */
 .page{height:1122px;overflow:hidden}
-.op-header{padding:16px 28px 14px}
-.op-headline{font-size:21px;margin-bottom:6px}
+.op-header{min-height:118px}
+.op-hbg-img{min-height:118px}
+.op-hcontent{padding:12px 20px 10px 14px}
+.op-headline{font-size:18px;margin-bottom:5px;line-height:1.12;max-width:none}
+.op-lede{font-size:9px;line-height:1.45;max-width:none}
 .op-lede{font-size:9.5px}
 .metrics-band{padding:7px 28px}
 .mstat-val{font-size:18px}
@@ -171,7 +176,7 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 .sc-frame{margin-top:6px}
 .cap{font-size:6.5px}
 @media print{html,body{background:white;height:297mm;max-height:297mm;overflow:hidden}.print-bar{display:none!important}.page{margin:0;box-shadow:none;width:210mm;height:297mm;max-height:297mm;overflow:hidden;page-break-after:avoid;break-after:avoid}@page{size:A4 portrait;margin:0}}
-@media screen and (max-width:834px){body{background:white}.page{width:100%;margin:0;box-shadow:none}.op-body{grid-template-columns:1fr}.op-col{border-right:none;border-bottom:1px solid var(--line)}.op-col:last-child{border-bottom:none}.op-steps{flex-wrap:wrap}.op-step{flex-basis:45%}}
+@media screen and (max-width:834px){body{background:white}.page{width:100%;margin:0;box-shadow:none}.op-header{grid-template-columns:1fr}.op-hbg-img{min-height:90px}.op-body{grid-template-columns:1fr}.op-col{border-right:none;border-bottom:1px solid var(--line)}.op-col:last-child{border-bottom:none}.op-steps{flex-wrap:wrap}.op-step{flex-basis:45%}}
 </style></head>
 <body>
 
@@ -188,7 +193,7 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 
   <!-- HEADER -->
   <header class="op-header">
-    <div class="op-hbg"></div><div class="op-hglow"></div>
+    <div class="op-hbg-img" aria-hidden="true"></div>
     <div class="op-hcontent">
       <div class="op-toprow">
         <div class="op-brand">
