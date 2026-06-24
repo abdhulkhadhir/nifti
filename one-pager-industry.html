@@ -7,11 +7,11 @@
 <meta property="og:title" content="Industry One-Pager | NiFTi Research Hub">
 <meta property="og:description" content="NiFTi one-pager for industry partners: deployed tools, measurable outcomes, and partnership opportunities to co-develop transport intelligence solutions.">
 <meta property="og:url" content="https://abdhulkhadhir.github.io/nifti/one-pager-industry.html">
-<meta property="og:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/motorway-arterial-layer2.png">
+<meta property="og:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero-smart-highway.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Industry One-Pager | NiFTi Research Hub">
 <meta name="twitter:description" content="NiFTi one-pager for industry partners: deployed tools, measurable outcomes, and partnership opportunities to co-develop transport intelligence solutions.">
-<meta name="twitter:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/motorway-arterial-layer2.png">
+<meta name="twitter:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero-smart-highway.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
@@ -33,12 +33,12 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 
 .page{width:794px;margin:20px auto;background:var(--white);box-shadow:0 4px 48px rgba(0,0,0,.35);overflow:hidden;font-size:10.5px;line-height:1.5}
 
-/* ── HEADER (split with tool imagery) ── */
-.op-header{position:relative;background:var(--ink);overflow:hidden;display:grid;grid-template-columns:1.05fr 1fr;min-height:128px}
-.op-hbg-img{background:url('assets/images/motorway-arterial-layer2.png') center 35%/cover no-repeat;min-height:128px;position:relative}
-.op-hbg-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 0%,rgba(11,25,39,.25) 50%,var(--ink) 100%)}
-.op-hcontent{padding:14px 24px 12px 16px;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center}
-.op-toprow{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+/* ── HEADER ── */
+.op-header{position:relative;background:var(--ink);padding:22px 30px 20px;overflow:hidden}
+.op-hbg{position:absolute;inset:0;background:url('assets/images/hero-smart-highway.png') 8% 48%/cover no-repeat;opacity:.20;filter:saturate(.55) brightness(.85)}
+.op-hglow{position:absolute;right:-5%;top:-40%;width:55%;height:200%;background:radial-gradient(ellipse,rgba(47,183,201,.18) 0%,transparent 65%);pointer-events:none}
+.op-hcontent{position:relative;z-index:2}
+.op-toprow{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
 .op-brand{display:flex;align-items:center;gap:10px}
 .op-svgmark{width:30px;height:30px}
 .op-wordmark{font-family:var(--dsp);font-size:22px;font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1}
@@ -98,15 +98,10 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 .sc-frame-bar::before{background:#FC5F56}
 .sc-frame-bar::after{background:#FDBD2E}
 .sc-frame img{width:100%;display:block}
+.sc-duo{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+.sc-duo .sc-frame{margin-top:0}
+.sc-duo .sc-frame img{max-height:68px}
 .cap{font-family:var(--mono);font-size:7px;letter-spacing:.05em;text-transform:uppercase;color:var(--tdim);margin-top:3px;text-align:center}
-
-/* Tool snapshot grids */
-.snap-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:6px 0 4px}
-.snap-item{border:1px solid var(--line);border-radius:3px;overflow:hidden;background:#fff}
-.snap-item img{width:100%;height:46px;object-fit:cover;object-position:top center;display:block}
-.snap-lbl{font-family:var(--mono);font-size:6px;letter-spacing:.05em;text-transform:uppercase;color:var(--tdim);padding:2px 5px;text-align:center;background:var(--paper);line-height:1.3}
-.snap-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:5px 0}
-.snap-strip .snap-item img{height:40px}
 
 /* Partnership section (right col) */
 .partner-section{}
@@ -151,37 +146,30 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 
 /* ── COMPACT: enforce A4 single page ── */
 .page{height:1122px;overflow:hidden}
-.op-header{min-height:118px}
-.op-hbg-img{min-height:118px}
-.op-hcontent{padding:12px 22px 10px 14px}
-.op-headline{font-size:19px;margin-bottom:5px;line-height:1.12}
-.op-lede{font-size:9px;line-height:1.45}
-.metrics-band{padding:6px 28px}
-.mstat-val{font-size:17px}
-.op-cycle{padding:6px 28px}
-.op-col{padding:9px 12px}
-.slabel{margin-bottom:3px}
-.stitle{font-size:11.5px;margin-bottom:6px;line-height:1.2}
-.div{margin:5px 0}
-.proj{padding:4px 0}
-.proj-desc{font-size:8.5px;line-height:1.4}
-.proj-outcome{font-size:7.5px;padding:2px 5px;margin-top:2px}
-.wyg-title{font-size:9.5px;margin-bottom:4px}
-.wyg-text{font-size:8px;line-height:1.35}
-.what-you-get{padding:7px 9px;margin-bottom:6px}
-.ms-text{font-size:8px;line-height:1.35}
-.model-sum{gap:3px;margin-bottom:6px}
-.brisbane-callout{padding:7px 9px;margin-bottom:6px}
-.bc-text{font-size:8px;line-height:1.4}
-.cta-box{padding:7px 9px}
-.cta-title{font-size:10px}
-.cta-text{font-size:8px;margin-bottom:3px;line-height:1.35}
-.sc-frame{margin-top:4px}
-.sc-frame img{max-height:72px;object-fit:cover;object-position:top}
-.cap{font-size:6px}
-.snap-grid{margin:4px 0}
-.snap-item img{height:42px}
-.snap-strip .snap-item img{height:36px}
+.op-header{padding:16px 28px 14px}
+.op-headline{font-size:21px;margin-bottom:6px}
+.op-lede{font-size:9.5px}
+.metrics-band{padding:7px 28px}
+.mstat-val{font-size:18px}
+.op-cycle{padding:7px 28px}
+.op-col{padding:10px 14px}
+.slabel{margin-bottom:4px}
+.stitle{font-size:12px;margin-bottom:8px}
+.div{margin:7px 0}
+.proj{padding:5px 0}
+.proj-desc{font-size:9px}
+.proj-outcome{font-size:8px;padding:2px 6px}
+.wyg-title{font-size:10px;margin-bottom:5px}
+.wyg-text{font-size:8.5px}
+.what-you-get{padding:8px 10px;margin-bottom:8px}
+.ms-text{font-size:8.5px}
+.model-sum{gap:4px;margin-bottom:8px}
+.brisbane-callout{padding:8px 10px;margin-bottom:8px}
+.bc-text{font-size:8.5px}
+.cta-box{padding:8px 10px}
+.cta-text{font-size:8.5px;margin-bottom:4px}
+.sc-frame{margin-top:6px}
+.cap{font-size:6.5px}
 @media print{html,body{background:white;height:297mm;max-height:297mm;overflow:hidden}.print-bar{display:none!important}.page{margin:0;box-shadow:none;width:210mm;height:297mm;max-height:297mm;overflow:hidden;page-break-after:avoid;break-after:avoid}@page{size:A4 portrait;margin:0}}
 @media screen and (max-width:834px){body{background:white}.page{width:100%;margin:0;box-shadow:none}.op-body{grid-template-columns:1fr}.op-col{border-right:none;border-bottom:1px solid var(--line)}.op-col:last-child{border-bottom:none}.op-steps{flex-wrap:wrap}.op-step{flex-basis:45%}}
 </style></head>
@@ -200,7 +188,7 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 
   <!-- HEADER -->
   <header class="op-header">
-    <div class="op-hbg-img" aria-hidden="true"></div>
+    <div class="op-hbg"></div><div class="op-hglow"></div>
     <div class="op-hcontent">
       <div class="op-toprow">
         <div class="op-brand">
@@ -264,7 +252,7 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
       <div class="proj">
         <div class="proj-top"><span class="proj-name">S-curve evaluation</span><span class="badge pub">Published</span></div>
         <div class="proj-role">Before-and-after evaluation &middot; co-published with TMR in Transport Research Record</div>
-        <div class="proj-desc">Quantifies the operational value of a network change. Co-authored with TMR engineers; now standard evaluation methodology across Queensland.</div>
+        <div class="proj-desc">Quantifies the operational value of a network change. Co-authored with TMR engineers; now the standard evaluation methodology across Queensland operations.</div>
       </div>
 
       <div class="proj">
@@ -275,13 +263,17 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 
       <div class="div"></div>
 
-      <div class="snap-strip">
-        <div class="snap-item"><img src="assets/images/glive-transit-map.png" alt="GLiVe transit map" loading="lazy"><div class="snap-lbl">GLiVe</div></div>
-        <div class="snap-item"><img src="assets/images/inteliagent-mockup.png" alt="InteliAgent mockup" loading="lazy"><div class="snap-lbl">InteliAgent</div></div>
-        <div class="snap-item"><img src="assets/images/data-lake-pipeline.png" alt="Data lake pipeline" loading="lazy"><div class="snap-lbl">Data lake</div></div>
-        <div class="snap-item"><img src="assets/images/bluetooth-tablet.png" alt="Bluetooth analytics" loading="lazy"><div class="snap-lbl">Bluetooth</div></div>
+      <div class="sc-duo">
+        <div class="sc-frame">
+          <div class="sc-frame-bar"></div>
+          <img src="assets/images/anspa-dashboard.png" alt="ANSPA Arterial Coordination Health Assessment Dashboard" loading="lazy">
+        </div>
+        <div class="sc-frame">
+          <div class="sc-frame-bar"></div>
+          <img src="assets/images/glive-transit-map.png" alt="GLiVe real-time transit monitoring map" loading="lazy">
+        </div>
       </div>
-      <div class="cap">Live tool snapshots from Queensland operations and development</div>
+      <div class="cap">ANSPA &mdash; Arterial Coordination Health Tool &nbsp;|&nbsp; GLiVe &mdash; Real-time transit monitoring</div>
     </div>
 
     <!-- COL 2: What industry gets + model + Brisbane + CTA -->
@@ -290,12 +282,7 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
       <span class="slabel">Why partner with NiFTi</span>
       <div class="stitle">What industry gets from the partnership.</div>
 
-      <div class="snap-grid">
-        <div class="snap-item"><img src="assets/images/anspa-dashboard.png" alt="ANSPA dashboard" loading="lazy"><div class="snap-lbl">ANSPA</div></div>
-        <div class="snap-item"><img src="assets/images/glive-transit-map.png" alt="GLiVe transit" loading="lazy"><div class="snap-lbl">GLiVe</div></div>
-        <div class="snap-item"><img src="assets/images/inteliagent-mockup.png" alt="InteliAgent" loading="lazy"><div class="snap-lbl">InteliAgent</div></div>
-        <div class="snap-item"><img src="assets/images/data-lake-pipeline.png" alt="Data pipeline" loading="lazy"><div class="snap-lbl">Data foundation</div></div>
-      </div>
+      <img src="assets/images/partnership-ecosystem.png" alt="Government, industry and academia working together in the NiFTi ecosystem" class="partner-img" loading="lazy">
 
       <div class="what-you-get">
         <div class="wyg-title">The NiFTi partnership value</div>
