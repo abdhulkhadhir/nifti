@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!DOCTYPE html><html lang="en" data-theme="academic"><head><meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>NiFTi &mdash; Academic and Research One-Pager</title>
 <meta name="description" content="NiFTi one-pager for academic and research audiences: research problems, methodology, data infrastructure, and collaboration pathways.">
 <meta property="og:type" content="website">
@@ -7,190 +7,16 @@
 <meta property="og:title" content="Academic One-Pager | NiFTi Research Hub">
 <meta property="og:description" content="NiFTi one-pager for academic and research audiences: research problems, methodology, data infrastructure, and collaboration pathways.">
 <meta property="og:url" content="https://abdhulkhadhir.github.io/nifti/one-pager-academic.html">
-<meta property="og:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero_one_pager_academia.png">
+<meta property="og:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero_one_pager_academia.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Academic One-Pager | NiFTi Research Hub">
 <meta name="twitter:description" content="NiFTi one-pager for academic and research audiences: research problems, methodology, data infrastructure, and collaboration pathways.">
-<meta name="twitter:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero_one_pager_academia.png">
+<meta name="twitter:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero_one_pager_academia.webp">
+<link rel="canonical" href="https://abdhulkhadhir.github.io/nifti/one-pager-academic.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<style>
-/* ================================================================
-   NiFTi One-Pager: ACADEMIC / RESEARCH TEAMS
-   Layout Option A: Partnership image prominent, research methodology,
-   data infrastructure, PhD pipeline, collaboration pathway
-   ================================================================ */
-:root{--ink:#0B1927;--ink2:#0F2136;--cyan:#2FB7C9;--amber:#E8A33D;--green:#46B27E;--paper:#F2F5FA;--white:#fff;--line:#E0E8F2;--td:#0B1927;--tm:#4A6382;--tl:#94AABF;--tdim:#6A8099;--dsp:'Space Grotesk',sans-serif;--bdy:'IBM Plex Sans',sans-serif;--mono:'IBM Plex Mono',monospace}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-a{text-decoration:none;color:inherit}
-html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-
-.print-bar{background:#060f1a;padding:10px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:99}
-.print-bar-label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--tl);text-transform:uppercase}
-.print-bar-actions{display:flex;gap:8px;align-items:center}
-.print-bar a{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--tl);padding:6px 12px;border:1px solid rgba(255,255,255,.1);border-radius:3px}
-.print-btn{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:#E8A33D;color:var(--ink);border:none;padding:7px 16px;border-radius:3px;cursor:pointer}
-.print-btn:hover{background:#F0B54D}
-
-.page{width:794px;margin:20px auto;background:var(--white);box-shadow:0 4px 48px rgba(0,0,0,.35);overflow:hidden;font-size:10.5px;line-height:1.5}
-
-/* ── HEADER ── */
-.op-header{position:relative;background:var(--ink2);padding:22px 30px 20px;overflow:hidden}
-.op-hglow{position:absolute;left:-5%;top:-30%;width:50%;height:180%;background:radial-gradient(ellipse,rgba(232,163,61,.14) 0%,transparent 65%);pointer-events:none}
-.op-hcontent{position:relative;z-index:2}
-.op-toprow{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
-.op-brand{display:flex;align-items:center;gap:10px}
-.op-svgmark{width:30px;height:30px}
-.op-wordmark{font-family:var(--dsp);font-size:22px;font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1}
-.op-wordmark b{color:#E8A33D}
-.op-fullname{font-family:var(--mono);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--tl);margin-top:3px;max-width:220px}
-.op-badge{font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#E8A33D;border:1px solid rgba(232,163,61,.28);padding:4px 9px;border-radius:3px;white-space:nowrap}
-.op-audience-badge{font-family:var(--mono);font-size:7.5px;letter-spacing:.1em;text-transform:uppercase;background:rgba(232,163,61,.15);color:#E8A33D;padding:3px 8px;border-radius:2px;display:inline-block;margin-bottom:8px}
-.op-headline{font-family:var(--dsp);font-size:23px;font-weight:700;color:#fff;letter-spacing:-.025em;line-height:1.15;max-width:520px;margin-bottom:8px}
-.op-headline .ac{color:#E8A33D}
-.op-lede{font-size:10.5px;color:var(--tl);max-width:530px;line-height:1.55}
-
-/* ── PARTNERSHIP VISUAL BAND ── */
-.partner-band{position:relative;overflow:hidden;border-top:1px solid rgba(232,163,61,.15);border-bottom:1px solid var(--line)}
-.partner-band img{width:100%;height:140px;object-fit:cover;object-position:center;display:block}
-.partner-band-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(11,25,39,.7) 0%,transparent 45%,transparent 55%,rgba(11,25,39,.7) 100%);display:flex;align-items:center;justify-content:space-between;padding:0 28px}
-.pbo-stat{text-align:center}
-.pbo-stat .val{font-family:var(--dsp);font-size:24px;font-weight:700;color:#fff;letter-spacing:-.025em;line-height:1}
-.pbo-stat .lbl{font-family:var(--mono);font-size:7.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:3px}
-
-/* ── INNOVATION CYCLE STRIP ── */
-.op-cycle{background:#0A1929;border-bottom:1px solid rgba(232,163,61,.12);padding:9px 30px;display:flex;align-items:center;gap:0}
-.op-cycle-head{font-family:var(--mono);font-size:7.5px;letter-spacing:.14em;text-transform:uppercase;color:#E8A33D;white-space:nowrap;padding-right:14px;margin-right:14px;border-right:1px solid rgba(232,163,61,.18);line-height:1.4}
-.op-steps{display:flex;flex:1;gap:4px}
-.op-step{flex:1;display:flex;align-items:flex-start;gap:6px;padding-right:8px;position:relative}
-.op-step:not(:last-child)::after{content:'>';position:absolute;right:0;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:8px;color:rgba(232,163,61,.3)}
-.op-snum{font-family:var(--dsp);font-size:13px;font-weight:700;color:#E8A33D;opacity:.5;flex-shrink:0;line-height:1.1;margin-top:1px}
-.op-stitle{font-family:var(--dsp);font-size:9.5px;font-weight:600;color:#fff;display:block}
-.op-ssub{font-size:7.5px;color:var(--tdim);line-height:1.3;display:block;margin-top:1px}
-
-/* ── BODY: 3 columns ── */
-.op-body{display:grid;grid-template-columns:1.1fr 1fr .9fr;border-top:1px solid var(--line)}
-.op-col{padding:16px 18px;border-right:1px solid var(--line)}
-.op-col:last-child{border-right:none}
-.slabel{font-family:var(--mono);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#E8A33D;display:block;margin-bottom:5px}
-.stitle{font-family:var(--dsp);font-size:12.5px;font-weight:700;color:var(--td);letter-spacing:-.015em;margin-bottom:10px}
-.div{height:1px;background:var(--line);margin:10px 0}
-
-/* Vision/Mission */
-.vm{padding:9px 10px;border-radius:4px;margin-bottom:8px}
-.vm.v{background:rgba(47,183,201,.05);border-left:3px solid var(--cyan)}
-.vm.m{background:rgba(232,163,61,.05);border-left:3px solid #E8A33D}
-.vm-lbl{font-family:var(--mono);font-size:7.5px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:4px}
-.vm.v .vm-lbl{color:var(--cyan)}
-.vm.m .vm-lbl{color:#E8A33D}
-.vm p{font-size:9px;color:var(--tm);line-height:1.5;font-style:italic}
-
-/* Problem statement */
-.problem-item{display:flex;gap:8px;margin-bottom:8px;align-items:flex-start}
-.prob-icon{width:20px;height:20px;border-radius:3px;background:rgba(232,163,61,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9px;color:#E8A33D}
-.prob-text{font-size:9px;color:var(--tm);line-height:1.45}
-.prob-text b{color:var(--td);font-weight:600}
-
-/* Research outputs */
-.output-item{border-bottom:1px solid var(--line);padding:6px 0}
-.output-item:last-of-type{border-bottom:none}
-.out-top{display:flex;justify-content:space-between;align-items:flex-start;gap:6px;margin-bottom:2px}
-.out-name{font-family:var(--dsp);font-size:11px;font-weight:700;color:var(--td)}
-.badge{font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-radius:2px;white-space:nowrap}
-.badge.dep{background:rgba(70,178,126,.14);color:#2C8159}
-.badge.dev{background:rgba(47,183,201,.14);color:#1C8294}
-.badge.ong{background:rgba(232,163,61,.14);color:#B5781F}
-.badge.pub{background:rgba(168,140,200,.14);color:#6B4AA0}
-.out-role{font-family:var(--mono);font-size:7.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--tdim);margin-bottom:3px}
-.out-desc{font-size:9px;color:var(--tm);line-height:1.45}
-
-/* Tool screenshots (body) */
-.sc-duo{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:6px 0 4px}
-.sc-frame{border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.sc-frame-bar{height:8px;background:#f0f0f0}
-.sc-frame img{width:100%;max-height:54px;object-fit:cover;object-position:top center;display:block}
-.sc-cap{font-family:var(--mono);font-size:6px;letter-spacing:.05em;text-transform:uppercase;color:var(--tdim);text-align:center;margin-top:2px}
-
-/* Data infrastructure */
-.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px}
-.data-stat{background:var(--paper);border-radius:3px;padding:6px 8px;border:1px solid var(--line)}
-.data-stat .dv{font-family:var(--dsp);font-size:15px;font-weight:700;color:var(--td);letter-spacing:-.02em;line-height:1}
-.data-stat .dl{font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--tdim);margin-top:2px}
-
-/* Methodology stages (vertical) */
-.meth-step{display:flex;gap:8px;margin-bottom:6px;align-items:flex-start}
-.meth-n{font-family:var(--dsp);font-size:14px;font-weight:700;color:rgba(232,163,61,.45);flex-shrink:0;line-height:1;width:16px}
-.meth-content{}
-.meth-title{font-family:var(--dsp);font-size:10px;font-weight:700;color:var(--td);margin-bottom:2px}
-.meth-desc{font-size:8.5px;color:var(--tm);line-height:1.4}
-
-/* PhD pipeline */
-.phd-box{background:rgba(232,163,61,.06);border:1px solid rgba(232,163,61,.18);border-radius:4px;padding:8px 10px;margin-bottom:8px}
-.phd-title{font-family:var(--dsp);font-size:10px;font-weight:700;color:var(--td);margin-bottom:5px}
-.phd-item{display:flex;gap:7px;font-size:8.5px;color:var(--tm);margin-bottom:3px;align-items:flex-start;line-height:1.4}
-.phd-item::before{content:"◆";font-size:6px;color:#E8A33D;flex-shrink:0;margin-top:2px}
-
-/* Collaboration pathway */
-.collab-step{display:grid;grid-template-columns:18px 1fr;gap:7px;margin-bottom:6px;align-items:flex-start}
-.collab-n{font-family:var(--dsp);font-weight:700;font-size:14px;color:var(--cyan);line-height:1}
-.collab-content{}
-.collab-title{font-family:var(--dsp);font-size:10px;font-weight:700;color:var(--td);margin-bottom:1px}
-.collab-desc{font-size:8.5px;color:var(--tm);line-height:1.4}
-
-/* CTA */
-.cta-box{background:var(--ink2);border-radius:4px;padding:10px 12px;border-top:2px solid #E8A33D}
-.cta-title{font-family:var(--dsp);font-size:11px;font-weight:700;color:#fff;margin-bottom:4px}
-.cta-text{font-size:8.5px;color:var(--tl);line-height:1.45;margin-bottom:6px}
-.cta-email{font-family:var(--mono);font-size:9.5px;color:#E8A33D;display:block}
-
-/* Footer */
-.op-footer{background:var(--ink);padding:10px 30px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.op-foot-note{font-size:7px;color:var(--tdim);max-width:430px;line-height:1.5}
-.op-foot-right{text-align:right;flex-shrink:0}
-.op-foot-email{font-family:var(--mono);font-size:8.5px;color:#E8A33D;display:block;margin-bottom:3px}
-.op-foot-qut{font-family:var(--mono);font-size:7px;letter-spacing:.1em;color:var(--tdim);text-transform:uppercase}
-.op-qr{display:flex;align-items:center;gap:8px;flex-shrink:0;padding-right:14px;border-right:1px solid rgba(255,255,255,.08);margin-right:14px}
-.op-qr img{width:48px;height:48px;border-radius:3px;background:#fff;padding:3px;display:block}
-.op-qr-text{display:flex;flex-direction:column;gap:2px}
-.op-qr-label{font-family:var(--mono);font-size:6.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--tdim)}
-.op-qr-url{font-family:var(--mono);font-size:7px;color:#E8A33D;line-height:1.3}
-
-/* ── COMPACT: enforce A4 single page ── */
-.page{height:1122px;overflow:hidden}
-.op-header{padding:14px 28px 12px}
-.op-headline{font-size:19px;margin-bottom:6px}
-.op-lede{font-size:9.5px}
-.partner-band img{height:96px}
-.pbo-stat .val{font-size:18px}
-.pbo-stat .lbl{font-size:7px}
-.op-cycle{padding:7px 28px}
-.op-col{padding:10px 13px}
-.slabel{margin-bottom:3px}
-.stitle{font-size:11.5px;margin-bottom:7px}
-.div{margin:6px 0}
-.vm{padding:7px 9px;margin-bottom:6px}
-.vm p{font-size:8.5px}
-.problem-item{margin-bottom:6px}
-.prob-text{font-size:8.5px}
-.output-item{padding:4px 0}
-.out-desc{font-size:8.5px}
-.data-grid{gap:4px;margin-bottom:6px}
-.data-stat{padding:4px 6px}
-.data-stat .dv{font-size:13px}
-.data-stat .dl{font-size:7px}
-.meth-step{margin-bottom:5px}
-.meth-desc{font-size:8px}
-.phd-box{padding:6px 8px;margin-bottom:6px}
-.phd-item{font-size:8px;margin-bottom:2px}
-.collab-step{margin-bottom:5px}
-.collab-desc{font-size:8px}
-.cta-box{padding:8px 10px}
-.cta-text{font-size:8px;margin-bottom:4px}
-.sc-duo{margin:4px 0}
-.sc-frame img{max-height:48px}
-@media print{html,body{background:white;height:297mm;max-height:297mm;overflow:hidden}.print-bar{display:none!important}.page{margin:0;box-shadow:none;width:210mm;height:297mm;max-height:297mm;overflow:hidden;page-break-after:avoid;break-after:avoid}@page{size:A4 portrait;margin:0}}
-@media screen and (max-width:834px){body{background:white}.page{width:100%;margin:0;box-shadow:none}.op-body{grid-template-columns:1fr}.op-col{border-right:none;border-bottom:1px solid var(--line)}.partner-band img{height:120px}}
-</style></head>
+<link rel="stylesheet" href="one-pager.css">
+</head>
 <body>
 
 <div class="print-bar">
@@ -204,13 +30,13 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 
 <div class="page">
 
-  <!-- HEADER -->
   <header class="op-header">
-    <div class="op-hglow"></div>
+    <div class="op-hero-img" style="background-image:url('assets/images/hero_one_pager_academia.webp')" aria-hidden="true"></div>
+    <div class="op-hero-overlay" aria-hidden="true"></div>
     <div class="op-hcontent">
       <div class="op-toprow">
         <div class="op-brand">
-          <svg class="op-svgmark" viewBox="0 0 48 48"><rect x="1.25" y="1.25" width="45.5" height="45.5" rx="11" fill="#0E1F38"/><line x1="24" y1="24" x2="24" y2="11" stroke="#E8A33D" stroke-width="1.4"/><line x1="24" y1="24" x2="13" y2="34" stroke="#E8A33D" stroke-width="1.4"/><line x1="24" y1="24" x2="35" y2="34" stroke="#E8A33D" stroke-width="1.4"/><line x1="24" y1="11" x2="35" y2="34" stroke="rgba(232,163,61,.35)" stroke-width="1"/><line x1="24" y1="11" x2="13" y2="34" stroke="rgba(232,163,61,.35)" stroke-width="1"/><line x1="13" y1="34" x2="35" y2="34" stroke="rgba(232,163,61,.35)" stroke-width="1"/><circle cx="24" cy="11" r="3" fill="#F4F6FA"/><circle cx="13" cy="34" r="3" fill="#F4F6FA"/><circle cx="35" cy="34" r="3" fill="#F4F6FA"/><circle cx="24" cy="24" r="4.6" fill="#E8A33D"/></svg>
+          <svg class="op-svgmark" viewBox="0 0 48 48" aria-hidden="true"><rect x="1.25" y="1.25" width="45.5" height="45.5" rx="11" fill="#0E1F38"/><line x1="24" y1="24" x2="24" y2="11" stroke="#E8A33D" stroke-width="1.4"/><line x1="24" y1="24" x2="13" y2="34" stroke="#E8A33D" stroke-width="1.4"/><line x1="24" y1="24" x2="35" y2="34" stroke="#E8A33D" stroke-width="1.4"/><line x1="24" y1="11" x2="35" y2="34" stroke="rgba(232,163,61,.35)" stroke-width="1"/><line x1="24" y1="11" x2="13" y2="34" stroke="rgba(232,163,61,.35)" stroke-width="1"/><line x1="13" y1="34" x2="35" y2="34" stroke="rgba(232,163,61,.35)" stroke-width="1"/><circle cx="24" cy="11" r="3" fill="#F4F6FA"/><circle cx="13" cy="34" r="3" fill="#F4F6FA"/><circle cx="35" cy="34" r="3" fill="#F4F6FA"/><circle cx="24" cy="24" r="4.6" fill="#E8A33D"/></svg>
           <div><div class="op-wordmark">Ni<b>F</b>Ti</div><div class="op-fullname">Network Intelligence for Future Transport and Mobility Impacts</div></div>
         </div>
         <div class="op-badge">Proposed ARC Research Hub &middot; QUT</div>
@@ -221,18 +47,13 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
     </div>
   </header>
 
-  <!-- PARTNERSHIP VISUAL BAND -->
-  <div class="partner-band">
-    <img src="assets/images/hero_one_pager_academia.png" alt="Academic innovation and research hub" loading="lazy">
-    <div class="partner-band-overlay">
-      <div class="pbo-stat"><div class="val">5+</div><div class="lbl">Deployed research outputs</div></div>
-      <div class="pbo-stat"><div class="val">10+</div><div class="lbl">Years operational research</div></div>
-      <div class="pbo-stat"><div class="val">8</div><div class="lbl">Partner organisations</div></div>
-      <div class="pbo-stat"><div class="val">25 GB</div><div class="lbl">Transit data per day</div></div>
-    </div>
+  <div class="op-stats">
+    <div class="op-stat"><div class="val">5+</div><div class="lbl">Deployed research outputs</div></div>
+    <div class="op-stat"><div class="val">10+</div><div class="lbl">Years operational research</div></div>
+    <div class="op-stat"><div class="val">8</div><div class="lbl">Partner organisations</div></div>
+    <div class="op-stat"><div class="val">25&nbsp;GB</div><div class="lbl">Transit data per day</div></div>
   </div>
 
-  <!-- INNOVATION CYCLE STRIP -->
   <div class="op-cycle">
     <div class="op-cycle-head">Innovation<br>Methodology</div>
     <div class="op-steps">
@@ -243,167 +64,106 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
     </div>
   </div>
 
-  <!-- BODY -->
-  <div class="op-body">
+  <div class="op-body cols-2">
 
-    <!-- COL 1: Research context + published outputs -->
     <div class="op-col">
       <span class="slabel">Research context</span>
 
-      <div class="vm v">
-        <span class="vm-lbl">Vision</span>
-        <p>To make Australia's transport networks among the most intelligent and responsive in the world, where research and operations advance together rather than apart.</p>
-      </div>
+      <div class="icon-item"><div class="icon-dot">V</div><div class="icon-text"><span class="it-title">Vision</span>To make Australia's transport networks among the most intelligent and responsive in the world, where research and operations advance together rather than apart.</div></div>
+      <div class="icon-item"><div class="icon-dot">M</div><div class="icon-text"><span class="it-title">Mission</span>The bridge between transport research and live network operations &mdash; building data infrastructure, algorithms, and decision-support tools grounded in operational reality.</div></div>
 
-      <div class="vm m">
-        <span class="vm-lbl">Mission</span>
-        <p>The bridge between transport research and live network operations, building data infrastructure, algorithms, and decision-support tools grounded in operational reality.</p>
-      </div>
-
-      <div class="div"></div>
+      <div class="op-div"></div>
 
       <span class="slabel">The research problems</span>
+      <div class="icon-item"><div class="icon-dot">&#9650;</div><div class="icon-text"><b>Boundary fragmentation.</b> Road and public transport planning run in separate silos. Motorway and arterial control systems are uncoordinated.</div></div>
+      <div class="icon-item"><div class="icon-dot">&#9670;</div><div class="icon-text"><b>Tacit knowledge loss.</b> Decades of operational expertise held by experienced engineers with no scalable transfer mechanism.</div></div>
+      <div class="icon-item"><div class="icon-dot">&#9632;</div><div class="icon-text"><b>Research-to-operations gap.</b> Strong research exists, but the pathway from publication to operational deployment is slow and rarely built in from the start.</div></div>
 
-      <div class="problem-item">
-        <div class="prob-icon">&#9650;</div>
-        <div class="prob-text"><b>Boundary fragmentation.</b> Road and public transport planning run in separate silos. Motorway and arterial control systems are uncoordinated. Network instabilities propagate across boundaries no single agency owns.</div>
-      </div>
-      <div class="problem-item">
-        <div class="prob-icon">&#9670;</div>
-        <div class="prob-text"><b>Tacit knowledge loss.</b> Decades of operational expertise held by experienced engineers with no scalable transfer mechanism. As the workforce turns over, institutional network intelligence is lost.</div>
-      </div>
-      <div class="problem-item">
-        <div class="prob-icon">&#9632;</div>
-        <div class="prob-text"><b>Research-to-operations gap.</b> Strong transport research exists but the pathway from publication to operational deployment is slow, costly, and rarely built in from the start.</div>
-      </div>
-
-      <div class="div"></div>
+      <div class="op-div"></div>
 
       <span class="slabel">Published and deployed research</span>
 
-      <div class="output-item">
-        <div class="out-top"><span class="out-name">OPTIMA</span><span class="badge dep">Deployed</span></div>
-        <div class="out-role">Motorway algorithm auto-calibration &middot; TMR</div>
-        <div class="out-desc">Automated calibration of STREAMS motorway algorithms with knowledge-transfer dashboards making algorithm behaviour transparent to operators.</div>
+      <div class="tool-card">
+        <div class="tool-top"><span class="tool-name">OPTIMA</span><span class="badge dep">Deployed</span></div>
+        <div class="tool-role">Motorway algorithm auto-calibration &middot; TMR</div>
+        <div class="tool-desc">Automated calibration of STREAMS motorway algorithms with knowledge-transfer dashboards making algorithm behaviour transparent to operators.</div>
       </div>
-
-      <div class="output-item">
-        <div class="out-top"><span class="out-name">S-curve evaluation</span><span class="badge pub">Transport Research Record</span></div>
-        <div class="out-role">Before-and-after evaluation &middot; co-published with TMR</div>
-        <div class="out-desc">Quantifies the value of a network operational change; co-authored with TMR engineers and now standard evaluation methodology in Queensland.</div>
+      <div class="tool-card">
+        <div class="tool-top"><span class="tool-name">S-curve evaluation</span><span class="badge pub">Transport Research Record</span></div>
+        <div class="tool-role">Before-and-after evaluation &middot; co-published with TMR</div>
+        <div class="tool-desc">Quantifies the value of a network operational change; now standard evaluation methodology in Queensland.</div>
       </div>
-
-      <div class="output-item">
-        <div class="out-top"><span class="out-name">ANSPA</span><span class="badge ong">Ongoing</span></div>
-        <div class="out-role">Arterial performance &middot; multimodal fusion</div>
-        <div class="out-desc">Fuses STREAMS, Bluetooth, probe, AFC GoCard, and GTFS data into a multimodal arterial performance diagnostic with five dashboard types. Targeted for operational integration; not yet in live operations.</div>
+      <div class="tool-card">
+        <div class="tool-top"><span class="tool-name">ANSPA</span><span class="badge ong">Ongoing</span></div>
+        <div class="tool-role">Arterial performance &middot; multimodal fusion</div>
+        <div class="tool-desc">Fuses STREAMS, Bluetooth, probe, AFC GoCard, and GTFS data into a multimodal arterial performance diagnostic. Targeted for operational integration; not yet in live operations.</div>
       </div>
-
-      <div class="output-item">
-        <div class="out-top"><span class="out-name">WiSe / WRVSL</span><span class="badge dev">In development</span></div>
-        <div class="out-role">Weather-responsive variable speed limits</div>
-        <div class="out-desc">Real-time crash-risk modelling with BoM radar and RWIS to trigger proactive speed management before conditions deteriorate.</div>
+      <div class="tool-card">
+        <div class="tool-top"><span class="tool-name">WiSe / WRVSL</span><span class="badge dev">In development</span></div>
+        <div class="tool-role">Weather-responsive variable speed limits</div>
+        <div class="tool-desc">Real-time crash-risk modelling with BoM radar and RWIS to trigger proactive speed management before conditions deteriorate.</div>
       </div>
-
-      <div class="output-item">
-        <div class="out-top"><span class="out-name">GLiVe &amp; SPARC</span><span class="badge dep">Deployed</span></div>
-        <div class="out-role">Real-time transit + corridor metrics &middot; BCC &amp; TransLink</div>
-        <div class="out-desc">25 GB/day transit monitoring at 2-10s resolution; SPARC delivers Movement and Place aligned corridor performance with BCC.</div>
+      <div class="tool-card">
+        <div class="tool-top"><span class="tool-name">GLiVe &amp; SPARC</span><span class="badge dep">Deployed</span></div>
+        <div class="tool-role">Real-time transit + corridor metrics &middot; BCC &amp; TransLink</div>
+        <div class="tool-desc">25 GB/day transit monitoring at 2-10s resolution; SPARC delivers Movement and Place aligned corridor performance with BCC.</div>
       </div>
-
     </div>
 
-    <!-- COL 2: Data infrastructure + methodology detail -->
     <div class="op-col">
       <span class="slabel">Research data infrastructure</span>
       <div class="stitle">Operational-scale data, accessible through partnership.</div>
-
-      <div class="data-grid">
-        <div class="data-stat"><div class="dv">7,500+</div><div class="dl">STREAMS loop detectors</div></div>
-        <div class="data-stat"><div class="dv">25 GB</div><div class="dl">Transit data per day</div></div>
-        <div class="data-stat"><div class="dv">2,200+</div><div class="dl">Bluetooth scanners</div></div>
-        <div class="data-stat"><div class="dv">20+ yr</div><div class="dl">Historical archive depth</div></div>
-        <div class="data-stat"><div class="dv">GoCard</div><div class="dl">AFC origin-destination</div></div>
-        <div class="data-stat"><div class="dv">Probe</div><div class="dl">Trajectory and travel time</div></div>
+      <div class="kv-grid">
+        <div class="kv-stat"><div class="dv">7,500+</div><div class="dl">STREAMS loop detectors</div></div>
+        <div class="kv-stat"><div class="dv">25&nbsp;GB</div><div class="dl">Transit data per day</div></div>
+        <div class="kv-stat"><div class="dv">2,200+</div><div class="dl">Bluetooth scanners</div></div>
+        <div class="kv-stat"><div class="dv">20+&nbsp;yr</div><div class="dl">Historical archive depth</div></div>
       </div>
-
-      <p style="font-size:9px;color:var(--tdim);margin-bottom:8px;line-height:1.5">Access to this infrastructure is one of the central research assets of the hub. Data partnerships with TMR, TransLink, and BCC provide research-grade access to live and historical datasets not available elsewhere in Australian academia.</p>
+      <p style="font-size:8.5px;color:var(--tdim);line-height:1.5;margin-bottom:8px">Research-grade access to live and historical multimodal datasets not available elsewhere in Australian academia, via data partnerships with TMR, TransLink, and BCC.</p>
 
       <div class="sc-duo">
-        <div class="sc-frame"><div class="sc-frame-bar"></div><img src="assets/images/anspa-dashboard.png" alt="ANSPA dashboard" loading="lazy"></div>
-        <div class="sc-frame"><div class="sc-frame-bar"></div><img src="assets/images/glive-transit-map.png" alt="GLiVe transit map" loading="lazy"></div>
+        <div class="sc-frame"><div class="sc-frame-bar"></div><img src="assets/images/anspa-dashboard.webp" alt="ANSPA dashboard" loading="lazy"></div>
+        <div class="sc-frame"><div class="sc-frame-bar"></div><img src="assets/images/glive-transit-map.webp" alt="GLiVe transit map" loading="lazy"></div>
       </div>
       <div class="sc-cap">ANSPA arterial diagnostics &nbsp;|&nbsp; GLiVe real-time transit</div>
 
-      <div class="div"></div>
+      <div class="op-div"></div>
 
-      <span class="slabel">Research methodology</span>
-      <div class="stitle" style="font-size:11px">Operationally co-designed from day one.</div>
+      <span class="slabel">Talent pipeline &amp; frontier research</span>
+      <div class="icon-item"><div class="icon-dot">&#9679;</div><div class="icon-text">PASCAL adaptive signal control (max-pressure method), with corridor and transit-priority extensions, tested on real Brisbane corridors.</div></div>
+      <div class="icon-item"><div class="icon-dot">&#9679;</div><div class="icon-text">Quantum-enhanced transport network optimisation.</div></div>
+      <div class="icon-item"><div class="icon-dot">&#9679;</div><div class="icon-text">InteliAgent: agentic AI decision support for traffic operators.</div></div>
+      <p style="font-size:8px;color:var(--tm);line-height:1.45;margin-bottom:8px">All PhD projects are embedded in operational partner organisations for part of their candidature, with direct engagement with operations teams.</p>
 
-      <div class="meth-step"><span class="meth-n">01</span><div class="meth-content"><div class="meth-title">Problem definition with operators</div><div class="meth-desc">Co-defined with operational partners; grounded in what actually constrains network performance.</div></div></div>
-      <div class="meth-step"><span class="meth-n">02</span><div class="meth-content"><div class="meth-title">Fit-for-purpose experimental design</div><div class="meth-desc">Developed and tested on real operational sites or datasets with operators embedded during testing.</div></div></div>
-      <div class="meth-step"><span class="meth-n">03</span><div class="meth-content"><div class="meth-title">Honest validation, null results included</div><div class="meth-desc">Null results are valid contributions. Rigour over optimism is a cultural principle.</div></div></div>
-      <div class="meth-step"><span class="meth-n">04</span><div class="meth-content"><div class="meth-title">Deployment path designed in from day one</div><div class="meth-desc">Implementation pathway planned before research starts. What gets built is built to deploy.</div></div></div>
+      <div class="op-div"></div>
 
-      <div class="div"></div>
+      <span class="slabel">How to collaborate</span>
+      <div class="num-step"><span class="n">01</span><div><div class="t">Affiliate research partner</div><div class="d">Formal collaboration on shared problems, with access to the data infrastructure and partner network.</div></div></div>
+      <div class="num-step"><span class="n">02</span><div><div class="t">Co-supervision arrangement</div><div class="d">Joint supervision of PhD or MPhil candidates with QUT researchers.</div></div></div>
+      <div class="num-step"><span class="n">03</span><div><div class="t">Visiting researcher program</div><div class="d">Short and extended research visits with access to operational data.</div></div></div>
 
-      <span class="slabel">The operating model</span>
-      <p style="font-size:8.5px;color:var(--tm);line-height:1.45;margin-bottom:5px"><b>Layer 1:</b> Connected multimodal data foundation (STREAMS, GLiVe, Bluetooth, AFC). <b>Layer 2:</b> Proactive algorithm layer crossing the motorway-arterial boundary. <b>Layer 3:</b> InteliAgent agentic AI decision support, capturing institutional knowledge as the workforce turns over and translating live data into operator intelligence.</p>
-
-    </div>
-
-    <!-- COL 3: PhD pipeline + collaboration -->
-    <div class="op-col">
-
-      <span class="slabel">Talent pipeline</span>
-      <div class="stitle" style="font-size:11px">PhD and MPhil researchers at the frontier.</div>
-
-      <div class="phd-box">
-        <div class="phd-title">Current and planned research areas</div>
-        <div class="phd-item">PASCAL adaptive signal control (max-pressure method), with corridor and transit-priority extensions</div>
-        <div class="phd-item">Agentic AI decision support for traffic operators (InteliAgent)</div>
-        <div class="phd-item">Quantum-enhanced transport network optimisation</div>
-        <div class="phd-item">Weather-responsive VSL and crash-risk prediction</div>
-        <div class="phd-item">Multimodal transit-road performance measurement</div>
-      </div>
-
-      <p style="font-size:9px;color:var(--tm);line-height:1.5;margin-bottom:8px">All PhD projects are embedded in operational partner organisations for part of their candidature, with access to live data and direct engagement with operations teams.</p>
-
-      <div class="div"></div>
-
-      <span class="slabel">Research collaboration</span>
-      <div class="stitle" style="font-size:11px">How to collaborate through NiFTi.</div>
-
-      <div class="collab-step"><span class="collab-n">01</span><div class="collab-content"><div class="collab-title">Affiliate research partner</div><div class="collab-desc">Formal research collaboration on shared problems. Access to the data infrastructure and partner network.</div></div></div>
-      <div class="collab-step"><span class="collab-n">02</span><div class="collab-content"><div class="collab-title">Co-supervision arrangement</div><div class="collab-desc">Joint supervision of PhD or MPhil candidates with QUT researchers on NiFTi-aligned problems.</div></div></div>
-      <div class="collab-step"><span class="collab-n">03</span><div class="collab-content"><div class="collab-title">Visiting researcher program</div><div class="collab-desc">Short and extended research visits to QUT with access to operational data and partner engagement.</div></div></div>
-      <div class="collab-step"><span class="collab-n">04</span><div class="collab-content"><div class="collab-title">International research exchange</div><div class="collab-desc">NiFTi actively seeks international academic partnerships to benchmark Queensland research against global transport networks.</div></div></div>
-
-      <div class="div"></div>
+      <div class="op-div"></div>
 
       <span class="slabel">The ecosystem</span>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px">
-        <img src="assets/images/logo-qut.jpg" alt="QUT" style="height:14px;width:auto;object-fit:contain">
-        <img src="assets/images/logo-tmr.png" alt="Transport and Main Roads" style="height:14px;width:auto;object-fit:contain;background:#fff;padding:2px 5px;border-radius:2px">
-        <img src="assets/images/logo-bcc.png" alt="Brisbane City Council" style="height:14px;width:auto;object-fit:contain">
-        <img src="assets/images/logo-translink.png" alt="TransLink" style="height:14px;width:auto;object-fit:contain">
-        <img src="assets/images/logo-transmax.png" alt="Transmax" style="height:14px;width:auto;object-fit:contain">
-        <img src="assets/images/logo-mainroads-wa.svg" alt="Main Roads Western Australia" style="height:14px;width:auto;object-fit:contain;background:#fff;padding:2px 5px;border-radius:2px">
-        <img src="assets/images/logo-imove.jpg" alt="iMOVE Cooperative Research Centre" style="height:14px;width:auto;object-fit:contain;background:#fff;padding:2px 5px;border-radius:2px">
-        <img src="assets/images/logo-aimsun.png" alt="Aimsun" style="height:14px;width:auto;object-fit:contain">
+      <div class="logo-row">
+        <img src="assets/images/logo-qut.jpg" alt="QUT">
+        <img class="lt" src="assets/images/logo-tmr.png" alt="Transport and Main Roads">
+        <img src="assets/images/logo-bcc.png" alt="Brisbane City Council">
+        <img src="assets/images/logo-translink.png" alt="TransLink">
+        <img src="assets/images/logo-transmax.png" alt="Transmax">
+        <img class="lt" src="assets/images/logo-mainroads-wa.svg" alt="Main Roads Western Australia">
+        <img class="lt" src="assets/images/logo-imove.jpg" alt="iMOVE Cooperative Research Centre">
+        <img src="assets/images/logo-aimsun.png" alt="Aimsun">
       </div>
 
-      <div class="cta-box">
+      <div class="cta-box dark">
         <div class="cta-title">Research collaboration enquiries.</div>
         <div class="cta-text">To discuss collaboration, co-supervision, or affiliate research partnership with the NiFTi hub, contact the hub director:</div>
         <a href="mailto:ashish.bhaskar@qut.edu.au" class="cta-email">ashish.bhaskar@qut.edu.au</a>
-        <div style="margin-top:5px;font-family:var(--mono);font-size:7.5px;color:rgba(232,163,61,.5);letter-spacing:.06em">PROF. ASHISH BHASKAR &middot; QUT</div>
       </div>
-
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer class="op-footer">
     <div class="op-qr">
       <img src="assets/images/qr-nifti-site.png" alt="QR code for NiFTi website">

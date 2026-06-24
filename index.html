@@ -1,23 +1,38 @@
 ﻿<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>NiFTi: Network Intelligence for Future Transport and Mobility Impacts</title>
+<title>NiFTi &middot; Network Intelligence for Future Transport and Mobility Impacts</title>
 <meta name="description" content="NiFTi is a proposed ARC Research Hub at QUT bridging transport research and live network operations across Queensland and Australia.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NiFTi Research Hub">
 <meta property="og:title" content="NiFTi | Network Intelligence for Future Transport and Mobility Impacts">
 <meta property="og:description" content="A proposed ARC Research Hub at QUT bridging transport research and live network operations across Queensland and Australia.">
 <meta property="og:url" content="https://abdhulkhadhir.github.io/nifti/">
-<meta property="og:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero-smart-highway.png">
+<link rel="canonical" href="https://abdhulkhadhir.github.io/nifti/">
+<meta property="og:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero_one_pager_generic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NiFTi | Network Intelligence for Future Transport and Mobility Impacts">
 <meta name="twitter:description" content="A proposed ARC Research Hub at QUT bridging transport research and live network operations across Queensland and Australia.">
-<meta name="twitter:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero-smart-highway.png">
+<meta name="twitter:image" content="https://abdhulkhadhir.github.io/nifti/assets/images/hero_one_pager_generic.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="nifti.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": "NiFTi Research Hub",
+  "alternateName": "Network Intelligence for Future Transport and Mobility Impacts",
+  "url": "https://abdhulkhadhir.github.io/nifti/",
+  "description": "A proposed ARC Research Hub at QUT bridging transport research and live network operations across Queensland and Australia.",
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "Queensland University of Technology",
+    "url": "https://www.qut.edu.au/"
+  }
+}
+</script>
 <style>
 .hero{position:relative;min-height:80vh;background:var(--ink);display:flex;align-items:center;overflow:hidden}
-.hero-photo{position:absolute;inset:0;z-index:1;background:url('assets/images/hero-smart-highway.png') center/cover no-repeat;opacity:.22;filter:saturate(.6) hue-rotate(-10deg)}
 .hero-video{position:absolute;inset:0;z-index:1;overflow:hidden}
 .hero-video video{width:100%;height:100%;object-fit:cover;opacity:.45;filter:saturate(.65) hue-rotate(-10deg)}
 .hero-scan{position:absolute;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(to bottom,transparent 0px,transparent 3px,rgba(47,183,201,.012) 3px,rgba(47,183,201,.012) 4px);animation:heroScanMove 20s linear infinite}
@@ -99,7 +114,7 @@
       <svg id="themeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     </button>
     <a class="tb-cta" href="partner.html">Partner with us &rarr;</a>
-    <button class="tb-hamburger" id="tbHamburger" aria-label="Open menu" onclick="toggleMobileNav()">
+    <button class="tb-hamburger" id="tbHamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMobileNav()">
       <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </div>
@@ -107,7 +122,7 @@
 <!-- ── HERO ────────────────────────────────────────── -->
 <header class="hero">
   <div class="hero-video">
-    <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
       <source src="assets/videos/hero-loop.mp4" type="video/mp4">
     </video>
   </div>
@@ -239,22 +254,22 @@
     <span class="eyebrow" style="color:var(--cyan)">Partners and collaborators</span>
     <div class="logo-marquee" style="margin-top:28px">
       <div class="logo-track">
-        <img src="assets/images/logo-qut.jpg" alt="QUT" class="partner-logo" loading="lazy">
-        <img src="assets/images/logo-tmr.png" alt="Department of Transport and Main Roads" class="partner-logo partner-logo--light" loading="lazy">
-        <img src="assets/images/logo-bcc.png" alt="Brisbane City Council" class="partner-logo" loading="lazy">
-        <img src="assets/images/logo-transmax.png" alt="Transmax" class="partner-logo" loading="lazy">
-        <img src="assets/images/logo-translink.png" alt="TransLink" class="partner-logo" loading="lazy">
-        <img src="assets/images/logo-mainroads-wa.svg" alt="Main Roads Western Australia" class="partner-logo partner-logo--light" loading="lazy">
-        <img src="assets/images/logo-imove.jpg" alt="iMOVE Cooperative Research Centre" class="partner-logo partner-logo--light" loading="lazy">
-        <img src="assets/images/logo-aimsun.png" alt="Aimsun" class="partner-logo" loading="lazy">
-        <img src="assets/images/logo-qut.jpg" alt="" class="partner-logo" loading="lazy" aria-hidden="true">
-        <img src="assets/images/logo-tmr.png" alt="" class="partner-logo partner-logo--light" loading="lazy" aria-hidden="true">
-        <img src="assets/images/logo-bcc.png" alt="" class="partner-logo" loading="lazy" aria-hidden="true">
-        <img src="assets/images/logo-transmax.png" alt="" class="partner-logo" loading="lazy" aria-hidden="true">
-        <img src="assets/images/logo-translink.png" alt="" class="partner-logo" loading="lazy" aria-hidden="true">
-        <img src="assets/images/logo-mainroads-wa.svg" alt="" class="partner-logo partner-logo--light" loading="lazy" aria-hidden="true">
-        <img src="assets/images/logo-imove.jpg" alt="" class="partner-logo partner-logo--light" loading="lazy" aria-hidden="true">
-        <img src="assets/images/logo-aimsun.png" alt="" class="partner-logo" loading="lazy" aria-hidden="true">
+        <img src="assets/images/logo-qut.jpg" width="44" height="44" alt="QUT" class="partner-logo" loading="lazy">
+        <img src="assets/images/logo-tmr.png" width="220" height="44" alt="Department of Transport and Main Roads" class="partner-logo partner-logo--light" loading="lazy">
+        <img src="assets/images/logo-bcc.png" width="44" height="44" alt="Brisbane City Council" class="partner-logo" loading="lazy">
+        <img src="assets/images/logo-transmax.png" width="125" height="44" alt="Transmax" class="partner-logo" loading="lazy">
+        <img src="assets/images/logo-translink.png" width="147" height="44" alt="TransLink" class="partner-logo" loading="lazy">
+        <img src="assets/images/logo-mainroads-wa.svg" width="144" height="44" alt="Main Roads Western Australia" class="partner-logo partner-logo--light" loading="lazy">
+        <img src="assets/images/logo-imove.jpg" width="62" height="44" alt="iMOVE Cooperative Research Centre" class="partner-logo partner-logo--light" loading="lazy">
+        <img src="assets/images/logo-aimsun.png" width="41" height="44" alt="Aimsun" class="partner-logo" loading="lazy">
+        <img src="assets/images/logo-qut.jpg" width="44" height="44" alt="" class="partner-logo" loading="lazy" aria-hidden="true">
+        <img src="assets/images/logo-tmr.png" width="220" height="44" alt="" class="partner-logo partner-logo--light" loading="lazy" aria-hidden="true">
+        <img src="assets/images/logo-bcc.png" width="44" height="44" alt="" class="partner-logo" loading="lazy" aria-hidden="true">
+        <img src="assets/images/logo-transmax.png" width="125" height="44" alt="" class="partner-logo" loading="lazy" aria-hidden="true">
+        <img src="assets/images/logo-translink.png" width="147" height="44" alt="" class="partner-logo" loading="lazy" aria-hidden="true">
+        <img src="assets/images/logo-mainroads-wa.svg" width="144" height="44" alt="" class="partner-logo partner-logo--light" loading="lazy" aria-hidden="true">
+        <img src="assets/images/logo-imove.jpg" width="62" height="44" alt="" class="partner-logo partner-logo--light" loading="lazy" aria-hidden="true">
+        <img src="assets/images/logo-aimsun.png" width="41" height="44" alt="" class="partner-logo" loading="lazy" aria-hidden="true">
       </div>
     </div>
   </div>

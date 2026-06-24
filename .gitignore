@@ -3,3 +3,5 @@ assets/pptx_extract/
 *.pdf
 INO_Meeting_transcript.txt
 *.txt
+!robots.txt
+.gstack/

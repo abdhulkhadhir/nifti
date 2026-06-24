@@ -67,6 +67,11 @@ h1, h2, h3, h4 {
 }
 p { line-height: 1.65; }
 ul { list-style: none; }
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible, [tabindex="0"]:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 
 /* === 3. LAYOUT ============================================= */
 .wrap {
@@ -144,7 +149,7 @@ section.dark p   { color: var(--text-light); }
   letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--text-light);
-  padding: 7px 13px;
+  padding: 13px 16px;
   border-radius: 3px;
   transition: color .2s, background .2s;
 }
@@ -894,7 +899,7 @@ section:not(.dark) {
 }
 
 /* Bento responsive */
-@media (max-width: 880px) {
+@media (max-width: 960px) {
   .bento { grid-template-columns: 1fr 1fr; }
   .bc.span2 { grid-column: span 1; }
   .bc.span3 { grid-column: span 2; }
@@ -1067,6 +1072,9 @@ section:not(.dark) {
   to   { transform: translateX(-50%); }
 }
 @media (max-width: 600px) { .logo-track { animation-duration: 40s; } }
+@media (prefers-reduced-motion: reduce) {
+  .logo-track { animation: none; }
+}
 
 /* Partner logo strip */
 .partner-logo {

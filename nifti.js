@@ -25,7 +25,9 @@
     }
     var links = document.getElementById('tbLinks');
     if (!links) return;
-    links.classList.toggle('open');
+    var open = links.classList.toggle('open');
+    var btn = document.getElementById('tbHamburger');
+    if (btn) btn.setAttribute('aria-expanded', open);
   };
 
   /* ── 1c. DARK / LIGHT THEME TOGGLE ─────────────────────── */
