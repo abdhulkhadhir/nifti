@@ -187,7 +187,7 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 
   <!-- HEADER: split with partnership image on left, text on right -->
   <header class="op-header">
-    <div class="op-hbg-img">
+    <div class="op-hbg-img" aria-hidden="true">
       <div class="op-hbg-overlay"></div>
     </div>
     <div class="op-hcontent">
@@ -227,6 +227,7 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
 
       <div class="story-block">
         <p>NiFTi gives Queensland's network operators better tools, better data, and better decision support. It is co-owned from day one: government agencies define the problems and bring operational data; researchers build the tools; industry deploys them. The result is research that sticks in operations, not research that sits on a shelf.</p>
+        <p style="font-style:italic;border-left:2px solid var(--green);padding-left:8px;margin-top:7px">&ldquo;I don't see it as an industry challenge &mdash; I see it as our challenge.&rdquo;<br><span style="font-family:var(--mono);font-style:normal;font-size:7px;letter-spacing:.06em;text-transform:uppercase;color:var(--tdim)">Transport and Main Roads, partnership voice</span></p>
       </div>
 
       <div class="div"></div>
@@ -309,21 +310,21 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
       <div class="cycle-step">
         <div class="cs-dot">1</div>
         <div class="cs-line"></div>
-        <div class="cs-content"><div class="cs-title">Define the problem together</div><div class="cs-desc">Government operators and researchers co-define the problem and what a good outcome looks like before any research begins.</div></div>
+        <div class="cs-content"><div class="cs-title">Define</div><div class="cs-desc">Government operators and researchers co-define the problem and what a good outcome looks like before any research begins.</div></div>
       </div>
       <div class="cycle-step">
         <div class="cs-dot">2</div>
         <div class="cs-line"></div>
-        <div class="cs-content"><div class="cs-title">Research and test on real sites</div><div class="cs-desc">Solutions are developed and tested on real Queensland infrastructure or operational datasets.</div></div>
+        <div class="cs-content"><div class="cs-title">Build &amp; Test</div><div class="cs-desc">Develop and test the approach on real Queensland infrastructure or operational datasets, with operators alongside researchers.</div></div>
       </div>
       <div class="cycle-step">
         <div class="cs-dot">3</div>
         <div class="cs-line"></div>
-        <div class="cs-content"><div class="cs-title">Honest evaluation</div><div class="cs-desc">If something does not work, that finding is reported and learned from. Rigour is non-negotiable.</div></div>
+        <div class="cs-content"><div class="cs-title">Validate</div><div class="cs-desc">Evaluate rigorously. If something does not work, that finding is reported and learned from &mdash; rigour over optimism.</div></div>
       </div>
       <div class="cycle-step">
         <div class="cs-dot">4</div>
-        <div class="cs-content"><div class="cs-title">Move what works into operations</div><div class="cs-desc">The path from research to deployment is planned from day one. What the hub builds is built to run on the network.</div></div>
+        <div class="cs-content"><div class="cs-title">Operationalise</div><div class="cs-desc">Adapt and deploy what works into live operations. The path from research to deployment is planned from day one, not retrofitted.</div></div>
       </div>
 
       <div class="div"></div>
@@ -331,20 +332,20 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
       <div class="brisbane-callout">
         <div class="bc-lbl">Brisbane 2032</div>
         <div class="bc-hl">The stress test for Queensland transport.</div>
-        <div class="bc-text">The Olympics will put the network under globally visible, concentrated demand. NiFTi is building the tools and capability that make 2032 manageable and that will continue delivering for Queensland commuters long after the Games.</div>
+        <div class="bc-text">The Olympics will put the network under globally visible, concentrated demand. NiFTi is building the agentic AI, sensing, and coupled-systems intelligence that make 2032 manageable, and that remain as a permanent capability for Queensland commuters long after the Games end.</div>
       </div>
 
       <div class="div"></div>
 
       <span class="slabel">Current partners</span>
       <div class="eco-grid">
-        <div class="eco-item">Queensland TMR</div>
-        <div class="eco-item">Brisbane City Council</div>
-        <div class="eco-item">TransLink</div>
-        <div class="eco-item">Transmax</div>
-        <div class="eco-item">iMOVE CRC</div>
-        <div class="eco-item">Main Roads WA</div>
-        <div class="eco-item">Aimsun</div>
+        <div class="eco-item" style="display:flex;align-items:center;justify-content:center;padding:6px 8px"><img src="assets/images/logo-tmr.png" alt="Queensland Transport and Main Roads" style="height:16px;width:auto;object-fit:contain;max-width:100%;background:#fff;padding:2px 5px;border-radius:2px"></div>
+        <div class="eco-item" style="display:flex;align-items:center;justify-content:center;padding:6px 8px"><img src="assets/images/logo-bcc.png" alt="Brisbane City Council" style="height:16px;width:auto;object-fit:contain;max-width:100%"></div>
+        <div class="eco-item" style="display:flex;align-items:center;justify-content:center;padding:6px 8px"><img src="assets/images/logo-translink.png" alt="TransLink" style="height:16px;width:auto;object-fit:contain;max-width:100%"></div>
+        <div class="eco-item" style="display:flex;align-items:center;justify-content:center;padding:6px 8px"><img src="assets/images/logo-transmax.png" alt="Transmax" style="height:16px;width:auto;object-fit:contain;max-width:100%"></div>
+        <div class="eco-item" style="display:flex;align-items:center;justify-content:center;padding:6px 8px"><img src="assets/images/logo-imove.jpg" alt="iMOVE Cooperative Research Centre" style="height:16px;width:auto;object-fit:contain;max-width:100%;background:#fff;padding:2px 5px;border-radius:2px"></div>
+        <div class="eco-item" style="display:flex;align-items:center;justify-content:center;padding:6px 8px"><img src="assets/images/logo-mainroads-wa.svg" alt="Main Roads Western Australia" style="height:16px;width:auto;object-fit:contain;max-width:100%;background:#fff;padding:2px 5px;border-radius:2px"></div>
+        <div class="eco-item" style="display:flex;align-items:center;justify-content:center;padding:6px 8px"><img src="assets/images/logo-aimsun.png" alt="Aimsun" style="height:16px;width:auto;object-fit:contain;max-width:100%"></div>
       </div>
 
       <div class="cta-box">
@@ -365,7 +366,7 @@ html,body{font-family:var(--bdy);background:#c8cdd6;-webkit-print-color-adjust:e
         <span class="op-qr-url">abdhulkhadhir.github.io/nifti</span>
       </div>
     </div>
-    <div class="op-foot-note">NiFTi (Network Intelligence for Future Transport and Mobility Impacts) is a proposed ARC Research Hub in development, led from the Intelligent Transport Systems group at QUT. All partner organisations are current collaborators or prospective partners. ARC Research Hub funding is subject to competitive application and approval processes.</div>
+    <div class="op-foot-note">NiFTi (Network Intelligence for Future Transport and Mobility Impacts) is a proposed ARC Research Hub in development, led from the Intelligent Transport Systems group at QUT. All partner organisations are collaborators or prospective partners. ARC Research Hub funding is subject to competitive application and approval.</div>
     <div class="op-foot-right"><span class="op-foot-email">ashish.bhaskar@qut.edu.au</span><span class="op-foot-qut">QUT &middot; Brisbane &middot; Australia</span></div>
   </footer>
 
